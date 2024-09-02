@@ -1,0 +1,96 @@
+body {
+    margin: 50px;
+    font-family: arial;
+    background-color: #020063;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+}
+
+.card {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -50%);
+    width: 220px;
+    padding: 0 80px;
+    height: 90px;
+    font-size: 16px;
+    line-height: 80px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #0005ff 0%, #937eff 50%, #ffffff 100%);
+    margin: 20px;
+}
+
+.card img {
+    float: left;
+    object-fit: cover;
+    margin: 5px 10px 0 -75px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.card .nama {
+    position: absolute;
+    text-align: center;
+    top: 28%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+    font-size: 1.3rem;
+    cursor: default;
+}
+
+.card .telp {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -30%);
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: default;
+}
+
+.card .inst {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(30%, -30%);
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: default;
+}
+
+.telp i, .inst i {
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: default;
+}
+
+.close {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    transition: color 0.3s ease-in-out;
+    position: absolute;
+    top: 5%;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
