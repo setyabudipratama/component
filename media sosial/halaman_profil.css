@@ -1,0 +1,397 @@
+:root {
+    --navbar: #BBC8FF;
+    --section: #0d00ff;
+    --footer: #0d00ff;
+    --text: #c4d1ff;
+    --active: yellow;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #BBC8FF;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar);
+    padding: 10px;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+/* tag h3 navbar */
+.navbar h3 {
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+    font-family: 'Pacifico', cursive;
+    cursor: default;
+}
+
+/* class fa-chevron-down */
+.navbar .fa-chevron-down {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* class fa-bars */
+.navbar .fa-bars {
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar .fa-chevron-down:hover,
+.navbar .fa-bars:hover {
+    transform: scale(1.1);
+}
+
+
+/* halaman profil */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class container */
+.container {
+    position: relative;
+    margin-top: 95px;
+    margin-bottom: 10px;
+    width: 50%;
+    min-height: 100vh;
+    z-index: 0;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--section);
+    box-shadow: inset 50px 50px 100px #000000;
+}
+
+/* class menu */
+.container .menu {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class edit */
+.menu .edit {
+    position: relative;
+    margin-top: 40px;
+    background-color: #7a7a7a;
+    width: 250px;
+    height: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* class share */
+.menu .share {
+    position: relative;
+    background-color: #7a7a7a;
+    margin-top: 40px;
+    width: 250px;
+    height: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* class fa-user-plus */
+.menu .fa-user-plus {
+    position: relative;
+    font-size: 1rem;
+    background-color: #7a7a7a;
+    margin-top: 40px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit:hover, 
+.share:hover, 
+.fa-user-plus:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* class profil */
+.container .profil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: default;
+}
+
+/* tag img */
+.profil img {
+    position: relative;
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* class fa-circle-plus */
+.profil .fa-circle-plus {
+    position: relative;
+    top: -19px;
+    left: 30px;
+    font-size: 1.3rem;
+    color: var(--text);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profil .fa-circle-plus:hover {
+    transform: scale(1.2);
+}
+
+/* tag h2 */
+.profil h2 {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin: 0;
+}
+
+/* tag p profil */
+.profil p {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+/* class data profil */
+.container .data {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 1.8rem;
+    cursor: default;
+}
+
+/* class information profil */
+.information {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--text);
+    font-size: 1.3rem;
+    cursor: default;
+}
+
+/* class sorotan profil */
+.sorotan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: -450px;
+}
+
+/* tag img sorotan */
+.sorotan img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sorotan img:hover {
+    transform: scale(1.1);
+}
+
+/* tag p sorotan */
+.sorotan p {
+    color: var(--text);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* class opsi */
+.postingan .fa-list {
+    color: var(--active);
+    border-bottom: 5px solid var(--active);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8%;
+}
+
+.opsi {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+/* class icon opsi */
+.fa-list,
+.fa-user-tag {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fa-list:hover,
+.fa-user-tag:hover {
+    transform: scale(1.2);
+}
+
+/* class post */
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    row-gap: 20px;
+    color: var(--text);
+}
+
+/* class text-muted, text-link, fa-circle-plus */
+.post .text-muted,
+.post .text-link {
+    font-size: 1.2rem;
+}
+
+.post .text-muted {
+    cursor: default;
+}
+
+.post .text-link, 
+.post .fa-circle-plus {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.post .text-link:hover, 
+.post .fa-circle-plus:hover {
+    transform: scale(1.1);
+}
+
+.post .fa-circle-plus {
+    font-size: 5rem;
+}
+
+
+/* footer */
+footer {
+    width: 15%;
+    height: 80%; /* menyesuaikan tinggi footer */
+    position: fixed;
+    right: 5%;
+    border-radius: 20px;
+    bottom: 2%;
+    background: #ffffff;
+    box-shadow:  10px 7px 0px #5a5a5a;
+}
+
+/* class icon */
+footer li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    right: 12%;
+    list-style: none;
+    margin: 60px 0 auto 0;
+}
+
+li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+a span {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    color: #000000;
+}
+
+.icon li.active {
+    background-color: var(--footer);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 25px;
+}
+
+.active span {
+    color: var(--text);
+}
+
+/* tag icon */
+.icon i {
+    color: #000000;
+}
+
+footer li {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+/* tag img */
+footer img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}

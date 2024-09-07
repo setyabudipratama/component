@@ -1,0 +1,391 @@
+:root {
+    --navbar: #BBC8FF;
+    --section: #0d00ff;
+    --footer: #0d00ff;
+    --text: #c4d1ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #BBC8FF;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar);
+    padding: 10px;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+/* tag h3 navbar */
+.navbar h3 {
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+    font-family: 'Pacifico', cursive;
+    cursor: default;
+}
+
+/* class fa bell */
+.navbar .fa-bell {
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* class fa message */
+.navbar .fa-message {
+    position: absolute;
+    top: 35%;
+    right: 8%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar .fa-bell:hover,
+.navbar .fa-message:hover {
+    transform: scale(1.1);
+}
+
+
+/* halaman story */
+#story {
+    width: 100%;
+}
+
+/* class container */
+#story .container {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* class list story */
+.list-story {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 18%;
+    cursor: pointer;
+}
+
+/* class story box */
+.list-story .story-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    border-radius: 13px;
+    margin: 5px;
+    position: relative;
+    background-color: var(--section);
+    box-shadow: inset 50px 50px 100px #000000;
+    transition: all 0.3s ease;
+}
+
+/* tag img */
+.story-box img {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 3px solid yellow;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.list-story .story-box:hover img {
+    border: none;
+}
+
+/* class story */
+.story-box .story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px;
+}
+
+/* class story name */
+.story-box .story-name {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 15px;
+    margin-top: 10px;
+}
+
+/* class fa circle plus */
+.story-box .fa-circle-plus {
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    border: 2px solid #ffffff;
+    background-color: var(--text);
+    border-radius: 50px;
+}
+
+
+/* halaman postingan */
+#post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    margin-bottom: 10px;
+    z-index: 0;
+}
+
+/* class container */
+#post .container {
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--section);
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: inset 50px 50px 100px #000000;
+}
+
+/* class profil */
+.container .profil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* tag img */
+.profil img {
+    position: relative;
+    left: -265%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+/* tag h2 profil */
+.profil h2 {
+    position: relative;
+    left: -248%;
+    font-size: 1rem;
+    color: var(--text);
+    cursor: default;
+}
+
+.profil img:hover {
+    transform: scale(1.1);
+}
+
+/* class fa ellipsis */
+.profil .fa-ellipsis-vertical {
+    position: relative;
+    right: -260%;
+    font-size: 1.5rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .fa-ellipsis-vertical:hover {
+    transform: scale(1.2);
+}
+
+/* class post */
+.container .post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* tag img post */
+.post img {
+    position: relative;
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.post img:hover {
+    transform: scale(1.05);
+}
+
+/* class post-icons */
+.post .post-icons {
+    position: relative;
+    top: 0;
+    left: -35%;
+    gap: 10px;
+    display: flex;
+}
+
+.post-icons .fa-thumbs-up,
+.post-icons .fa-comment,
+.post-icons .fa-paper-plane {
+    color: var(--text);
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.post-icons .fa-thumbs-up:hover,
+.post .fa-comment:hover,
+.post .fa-paper-plane:hover {
+    color: #000000;
+    background-color: var(--text);
+    border-radius: 50px;
+    padding: 5px;
+    transform: scale(1.1);
+}
+
+/* tag span */
+.post span {
+    position: relative;
+    top: 10px;
+    left: -35%;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    color: var(--text);
+    cursor: default;
+}
+
+/* tag h2 post */
+.post h2 {
+    position: relative;
+    top: 0;
+    left: -35%;
+    font-size: 1.2rem;
+    line-height: 35px;
+    color: var(--text);
+    cursor: default;
+}
+
+/* tag p */
+.post p {
+    position: relative;
+    top: 0;
+    left: -35%;
+    font-size: 1rem;
+    margin-top: -15px;
+    color: var(--text);
+    cursor: default;
+}
+
+/* class text-muted */
+.post .text-muted {
+    position: relative;
+    top: 0;
+    left: -35%;
+    font-size: 01rem;
+    color: #575757;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+
+/* footer */
+footer {
+    width: 15%;
+    height: 80%; /* menyesuaikan tinggi footer */
+    position: fixed;
+    right: 5%;
+    border-radius: 20px;
+    bottom: 2%;
+    background: #ffffff;
+    box-shadow:  10px 7px 0px #5a5a5a;
+}
+
+/* class icon */
+footer li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    right: 12%;
+    list-style: none;
+    margin: 60px 0 auto 0;
+}
+
+li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+a span {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    color: #000000;
+}
+
+.icon li.active {
+    background-color: var(--footer);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 25px;
+}
+
+.active span {
+    color: var(--text);
+}
+
+/* tag icon */
+.icon i {
+    color: #000000;
+}
+
+/* class fa-house */
+.active .fa-house {
+    color: var(--text);
+}
+
+footer li {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+/* tag img */
+footer img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}

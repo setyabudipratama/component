@@ -1,0 +1,253 @@
+:root {
+    --navbar: #BBC8FF;
+    --section: #0d00ff;
+    --footer: #0d00ff;
+    --text: #c4d1ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #BBC8FF;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar);
+    padding: 10px;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+/* tag h3 navbar */
+.navbar h3 {
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 50px;
+    float: left;
+    font-family: 'Pacifico', cursive;
+}
+
+/* halaman video */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class container */
+section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+    background-color: var(--section);
+    box-shadow: inset 50px 50px 100px #000000;
+}
+
+/* class post */
+.container .post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    row-gap: 20px;
+}
+
+/* tag video */
+.post video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* tag img */
+.post img {
+    position: absolute;
+    top: 150%;
+    left: 30%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.post img:hover {
+    transform: scale(1.1);
+}
+
+/* tag h4 */
+.post h4 {
+    position: absolute;
+    top: 153.5%;
+    left: 37%;
+    font-size: 1rem;
+    line-height: 15px;
+    background-color: #272727;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.post h4:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+/* tag p */
+.post p {
+    position: absolute;
+    top: 170%;
+    left: 30%;
+    font-size: 0.8rem;
+    line-height: 15px;
+    color: white;
+    cursor: default;
+}
+
+/* class text-muted */
+.post .text-muted {
+    position: absolute;
+    top: 177%;
+    left: 30%;
+    font-size: 0.8rem;
+    line-height: 15px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.post .text-muted:hover {
+    transform: scale(1.08);
+}
+
+/* class icons-footer */
+.icons-footer {
+    position: absolute;
+    top: 140%;
+    right: 32%;
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.6rem;
+    column-gap: 20px;
+}
+
+.fa-thumbs-up, 
+.fa-comment, 
+.fa-paper-plane {
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fa-thumbs-up:hover, 
+.fa-comment:hover, 
+.fa-paper-plane:hover {
+    color: #000000;
+    background-color: rgb(222, 222, 222);
+    border-radius: 50px;
+    padding: 5px;
+    transform: scale(1.1);
+}
+
+
+/* footer */
+footer {
+    width: 15%;
+    height: 80%; /* menyesuaikan tinggi footer */
+    position: fixed;
+    right: 5%;
+    border-radius: 20px;
+    bottom: 2%;
+    background: #ffffff;
+    box-shadow:  10px 7px 0px #5a5a5a;
+}
+
+/* class icon */
+footer li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    right: 12%;
+    list-style: none;
+    margin: 60px 0 auto 0;
+}
+
+li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+a span {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    color: #000000;
+}
+
+.icon li.active {
+    background-color: var(--footer);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 25px;
+}
+
+.active span {
+    color: var(--text);
+}
+
+/* tag icon */
+.icon i {
+    color: #000000;
+}
+
+/* class fa-film */
+.active .fa-film {
+    color: var(--text);
+}
+
+footer li {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+/* tag img */
+footer img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
