@@ -1,0 +1,709 @@
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+
+/* element header */
+header {
+   background: linear-gradient(90deg, rgba(2, 0, 36, 1), rgba(9, 9, 121, 1), rgba(0, 212, 255, 1));
+   /* Mengatur warna latar belakang */
+   animation: bg 5s linear infinite;
+   /* Mengatur animasi warna latar belakang */
+   width: 100%;
+   /* Mengatur lebar elemen agar memenuhi lebar kontainer */
+   max-width: 100%;
+   /* Mengatur lebar maksimum elemen agar tidak melebihi lebar kontainer */
+   margin: auto;
+   height: 50px;
+   display: flex;
+   /* Mengatur elemen sebagai flex container */
+   align-items: center;
+   justify-content: space-around;
+   position: relative;
+   z-index: 100;
+}
+
+@keyframes bg {
+   100% {
+      filter: hue-rotate(360deg);
+   }
+}
+
+/* element a */
+header a {
+   position: relative;
+   /* Mengatur posisi efek hover */
+   color: #ffffff;
+   font-size: 0.9rem;
+   text-decoration: none;
+   transition: all 0.3s ease;
+   /* Mengatur efek transisi */
+}
+
+header a:after {
+   position: absolute;
+   /* Mengatur posisi efek after */
+   content: "";
+   width: auto;
+   height: auto;
+   margin: -5px;
+   /* Mengatur jarak efek atau ukuran background hover */
+   inset: 0;
+   background: rgb(255, 255, 255);
+   /* Mengatur warna efek */
+   scale: 0 0;
+   /* Mengatur ukuran efek setelah ditransisi */
+   z-index: -1;
+   transition: 0.45s;
+   /* Mengatur durasi transisi */
+   border-radius: 10px;
+}
+
+header a:hover {
+   position: relative;
+   /* Mengatur posisi efek hover */
+   width: auto;
+   height: auto;
+   font-weight: 600;
+   color: #6634ff;
+   /* merubah warna teks ketika kursor diarahkan */
+}
+
+header a:hover::after {
+   scale: 1 1;
+   /* Mengatur ukuran efek waktu hover dan setelah ditransisi */
+}
+
+
+/* element class carousel */
+.carousel {
+   width: 100%;
+   /* Mengatur lebar carousel agar memenuhi seluruh lebar layar atau kontainer induknya */
+   height: 100vh;
+   /* Mengatur tinggi carousel agar memenuhi 100% dari tinggi viewport (tinggi layar) */
+   margin-top: -50px;
+   /* Menggeser carousel ke atas sebesar 50px, bisa digunakan untuk overlap dengan elemen di atasnya */
+   overflow: hidden;
+   /* Menyembunyikan konten yang melampaui batas elemen carousel, menjaga konten tetap dalam batas carousel */
+   position: relative;
+   /* Mengatur posisi carousel sebagai relatif, memungkinkan elemen di dalamnya diposisikan secara absolut */
+}
+
+/* element class list item*/
+.carousel .list .item {
+   width: 100%;
+   /* Mengatur lebar elemen agar mengambil 100% dari kontainer induknya */
+   height: auto;
+   /* Mengatur tinggi elemen secara otomatis berdasarkan rasio aspeknya */
+   position: absolute;
+   /* Mengatur posisi elemen secara absolut dalam kontainer induknya */
+   inset: 0 0 0 0;
+   /* Menempatkan elemen di dalam kontainer, sehingga mengisi seluruh ruang kontainer */
+}
+
+/* element class img */
+.carousel .list .item img {
+   width: 100%;
+   /* Mengatur lebar gambar agar memenuhi lebar kontainer induknya */
+   height: 100%;
+   /* Mengatur tinggi gambar agar memenuhi tinggi kontainer induknya */
+   object-fit: cover;
+   /* Memastikan gambar tetap menutupi seluruh area tanpa mengubah rasio aspeknya */
+   filter: brightness(0.5);
+   /* Mengatur filter brightness untuk mengatur tingkat kecerahan gambar */
+}
+
+
+/* element class content */
+.carousel .list .item .content {
+   position: absolute;
+   /* Menempatkan elemen secara absolut dalam kontainer induknya (.item) */
+   top: 15%;
+   width: 100%;
+   /* Menentukan lebar elemen sebagai 1140px */
+   max-width: 80%;
+   /* Memastikan lebar elemen tidak melebihi 80% dari lebar kontainernya */
+   left: 45%;
+   transform: translateX(-50%);
+   /* Menggeser elemen ke kiri sebesar 50% dari lebarnya sendiri untuk memusatkan posisi */
+   padding-right: 30%;
+   box-sizing: border-box;
+   /* Mengubah model kotak elemen sehingga padding dihitung dalam lebar dan tinggi total */
+}
+
+/* element class author */
+.carousel .list .item .author {
+   font-size: 1.2rem;
+   font-weight: bold;
+   color: #ffffff;
+   letter-spacing: 5px;
+   /* Menambahkan jarak antar huruf sebesar 6px untuk memberi efek spacing lebar */
+   margin-left: 4px;
+}
+
+/* element class title */
+.carousel .list .item .title {
+   font-size: 2.5rem;
+   font-weight: bold;
+   color: #ffffff;
+   margin-top: 10px;
+}
+
+/* element class topic */
+.carousel .list .item .topic {
+   font-size: 2rem;
+   font-weight: bold;
+   color: yellow;
+   margin-bottom: 10px;
+}
+
+/* element class describe */
+.carousel .list .item .describe {
+   width: 80%;
+   /* Mengatur lebar elemen agar memenuhi lebar kontainer induknya */
+   height: auto;
+   /* Mengatur tinggi elemen secara otomatis berdasarkan rasio aspeknya */
+   font-size: 1rem;
+   color: #ffffff;
+   text-align: center;
+   /* Mengatur posisi teks secara center */
+}
+
+.carousel .list .item .author,
+.carousel .list .item .title,
+.carousel .list .item .topic {
+   cursor: default;
+}
+
+
+/* element class buttons */
+.carousel .list .item .buttons {
+   display: grid;
+   /* Mengatur elemen sebagai grid container */
+   grid-template-columns: repeat(2, 100px);
+   /* Membuat dua kolom dengan lebar masing-masing 130px */
+   grid-template-rows: 30px;
+   /* Membuat satu baris dengan tinggi 40px */
+   gap: 20px;
+   /* Menambahkan jarak 10px antara kolom dan baris dalam grid */
+   margin-top: 30px;
+   /* Menambahkan margin sebesar 20px di bagian atas elemen, memberi ruang antara elemen ini dan elemen di atasnya */
+}
+
+/* element button */
+.carousel .list .item .buttons button {
+   border: none;
+   background-color: #ffffff;
+   color: #000000;
+   font-weight: 600;
+   /* Mengatur ketebalan teks */
+   border-radius: 10px;
+   transition: all 0.3s ease;
+   /* Mengatur efek transisi pada semua elemen */
+}
+
+.carousel .list .item .buttons button:hover {
+   border: none;
+   background-color: #fbff00;
+   color: #0026ff;
+   font-weight: 600;
+   /* Mengatur ketebalan teks */
+   border-radius: 10px;
+   scale: 1.1;
+   /* Menggeser elemen sebesar 10% */
+}
+
+
+/* element class black */
+/* .carousel .list .item .black {
+   width: 100%;
+   height: 100%;
+   border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.067), #000000);
+   position: absolute;
+   top: 0;
+   left: 0;
+} */
+
+
+/* element class thumbnails */
+.thumbnail {
+   position: absolute;
+   /* Mengatur posisi elemen secara absolut dalam kontainer induknya (.item) */
+   bottom: 13%;
+   left: 50%;
+   width: max-content;
+   /* Mengatur lebar elemen agar memenuhi lebar kontainer induknya */
+   z-index: 100;
+   /* Mengatur posisi elemen sebesar 100 */
+   display: flex;
+   /* Mengatur elemen sebagai flex container */
+   gap: 25px;
+   /* Mengatur jarak antara elemen thumbnail */
+}
+
+/* element class item */
+.thumbnail .item {
+   width: 150px;
+   /* Mengatur lebar elemen thumbnail */
+   height: 200px;
+   /* Mengatur tinggi elemen thumbnail */
+   flex-shrink: 0;
+   /* Mengatur elemen tidak memperkecil lebarnya */
+   position: relative;
+   /* Mengatur posisi elemen secara relatif dalam elemen thumbnail */
+}
+
+/* element img */
+.thumbnail .item img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   /* Mengatur objek gambar untuk menyesuaikan ukuran lebar dan tinggi */
+   border-radius: 10px;
+}
+
+/* element class content */
+.thumbnail .item .content {
+   color: white;
+   position: absolute;
+   bottom: 10px;
+   left: 10px;
+   right: 10px;
+}
+
+/* element class title */
+.thumbnail .item .content .title {
+   display: flex;
+   justify-content: center;
+   gap: 5px;
+   font-size: 1rem;
+   text-transform: uppercase;
+}
+
+
+/* element class arrows */
+.arrows {
+   position: absolute;
+   /* Mengatur posisi elemen secara absolut */
+   bottom: 2%;
+   right: 39%;
+   z-index: 100;
+   width: max-content;
+   max-width: 30%;
+   display: flex;
+   /* Mengatur elemen sebagai flex container */
+   gap: 30px;
+   /* Mengatur jarak antara elemen tombol */
+   align-items: center;
+   /* Mengatur aligment elemen vertikal */
+}
+
+/* element button */
+.arrows button {
+   width: 50px;
+   /* Mengatur lebar tombol */
+   height: 50px;
+   /* Mengatur tinggi tombol */
+   border-radius: 10%;
+   background-color: rgba(0, 0, 0, 0.5);
+   /* Mengatur warna latar belakang tombol */
+   color: white;
+   /* Mengatur warna teks tombol */
+   font-size: 1.2rem;
+   /* Mengatur ukuran teks tombol */
+   transition: 0.5s;
+   /* Mengatur efek transisi tombol */
+   cursor: pointer;
+}
+
+.arrows button:hover {
+   background-color: rgba(255, 255, 255, 0.5);
+   /* Mengatur warna latar belakang tombol ketika dihover */
+   color: black;
+   /* Mengatur warna teks tombol ketika dihover */
+   transform: scale(1.1);
+}
+
+
+/* element class item in the first item */
+.carousel .list .item:first-child {
+   z-index: 1;
+   /* Mengatur urutan tumpukan elemen agar elemen ini muncul di atas elemen lain yang memiliki z-index lebih rendah */
+}
+
+/* element class author, title, topic, describe, buttons */
+/* .carousel .list .item:first-child .content .author, */
+.carousel .list .item:first-child .content .title,
+.carousel .list .item:first-child .content .topic,
+.carousel .list .item:first-child .content .describe,
+.carousel .list .item:first-child .content .buttons {
+   transform: translateY(-50px);
+   /* Menggeser elemen vertikal ke bawah sebesar 50px */
+   filter: blur(20px);
+   /* Menambahkan efek blur sebesar 20px pada elemen */
+   opacity: 0;
+   /* Mengatur elemen agar sepenuhnya transparan (tidak terlihat) */
+   animation: showContent 0.5s 1s linear 1 forwards;
+   /* 
+   * `animation` showContent property:
+   * - `showContent`: Nama animasi yang diterapkan.
+   * - `0,5s`: Durasi animasi selama 0,5 detik.
+   * - `linear`: Tipe timing function, animasi bergerak dengan kecepatan konstan.
+   * - `1`: Jumlah iterasi animasi, yaitu 1 kali.
+   * - `forwards`: Menjaga gaya akhir animasi setelah selesai.
+   */
+}
+
+@keyframes showContent {
+   to {
+      transform: translateY(0px);
+      /* Menggeser elemen kembali ke posisi aslinya pada sumbu Y */
+      filter: blur(0px);
+      /* Menghilangkan efek blur sepenuhnya, membuat elemen tampak jelas */
+      opacity: 1;
+      /* Mengatur elemen agar sepenuhnya terlihat (sepenuhnya opaque) */
+   }
+}
+
+/* animasi delay untuk element class title, topic, describe, buttons */
+.carousel .list .item:first-child .content .title {
+   animation-delay: 1s !important;
+   /* Mengatur delay 1 detik */
+}
+
+.carousel .list .item:first-child .content .topic {
+   animation-delay: 1.2s !important;
+   /* Mengatur delay 1,2 detik */
+}
+
+.carousel .list .item:first-child .content .describe {
+   animation-delay: 1.4s !important;
+   /* Mengatur delay 1,4 detik */
+}
+
+.carousel .list .item:first-child .content .buttons {
+   animation-delay: 1.6s !important;
+   /* Mengatur delay 1,6 detik */
+}
+
+
+/* element class title, topic, describe */
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .describe,
+.carousel.prev .list .item:nth-child(2) .content .buttons {
+   animation: contentOut 0.5s linear 1 forwards;
+   /* Menerapkan animasi `contentOut` selama 0,5 detik */
+}
+
+@keyframes contentOut {
+   to {
+      transform: translateY(-150px);
+      /* Menggeser elemen ke bawah sebesar 150px */
+      filter: blur(20px);
+      /* Menambahkan efek blur sebesar 20px pada elemen */
+      opacity: 0;
+   }
+}
+
+/* animasi delay untuk element class title, topic, describe, buttons */
+.carousel .list .item:nth-child(2) .content .title {
+   animation-delay: 0.5s !important;
+   /* Mengatur delay 0.5 detik */
+}
+
+.carousel .list .item:nth-child(2) .content .topic {
+   animation-delay: 0.7s !important;
+   /* Mengatur delay 0.7 detik */
+}
+
+.carousel .list .item:nth-child(2) .content .describe {
+   animation-delay: 0.9s !important;
+   /* Mengatur delay 0.9 detik */
+}
+
+.carousel .list .item:nth-child(2) .content .buttons {
+   animation-delay: 1.1s !important;
+   /* Mengatur delay 1,1 detik */
+}
+
+
+/* animasi untuk gambar waktu muncul element class img*/
+.carousel.next .list .item:first-child img {
+   width: 150px;
+   /* Mengatur lebar gambar saat animasi dimulai */
+   height: 220px;
+   /* Mengatur tinggi gambar saat animasi dimulai */
+   position: absolute;
+   /* Menempatkan gambar dalam posisi absolut terhadap elemen induknya */
+   bottom: 50px;
+   /* Menempatkan gambar 50px dari bagian bawah elemen induk */
+   left: 50%;
+   /* Menempatkan gambar di tengah secara horizontal relatif terhadap elemen induknya */
+   border-radius: 30px;
+   /* Memberikan sudut membulat pada gambar dengan radius 30px */
+   animation: showImage 0.5s linear 1 forwards;
+   /* Menerapkan animasi `showImage` selama 0,5 detik, 
+   berjalan dengan kecepatan konstan, dimainkan sekali, dan mempertahankan keadaan akhir */
+}
+
+@keyframes showImage {
+   to {
+      bottom: 0;
+      /* Menggerakkan gambar ke posisi bawah (0px dari bawah elemen induk) */
+      left: 0;
+      /* Menggerakkan gambar ke posisi kiri (0px dari kiri elemen induk) */
+      width: 100%;
+      /* Mengubah lebar gambar menjadi 100% dari lebar elemen induk */
+      height: 100%;
+      /* Mengubah tinggi gambar menjadi 100% dari tinggi elemen induk */
+      border-radius: 0;
+      /* Menghilangkan sudut membulat, membuat gambar menjadi persegi */
+   }
+}
+
+
+/* animasi untuk thumbnail bergeser ke kanan waktu munculnya gambar */
+.carousel.next .thumbnail .item:nth-last-child(1) {
+   overflow: hidden;
+   /* Mengatur elemen `overflow` ke `hidden` */
+   animation: showThumbnail 0.5s linear 1 forwards;
+   /* Menerapkan animasi `showThumbnail` selama 0,5 detik, 
+   dengan kecepatan konstan (linear), diputar sekali (1), dan tetap dalam keadaan akhir animasi (forwards) */
+}
+
+@keyframes showThumbnail {
+   from {
+      width: 0;
+      /* Mengatur lebar gambar menjadi 0 */
+      opacity: 0;
+      /* Mengatur opasitas gambar menjadi 0 */
+   }
+}
+
+
+/* element class item image */
+/* .carousel.prev .list .item img {
+   z-index: 100;
+} */
+
+
+/* element class thumbnail, animasi untuk thumbnail bergeser ke kiri waktu munculnya gambar */
+.carousel.next .thumbnail {
+   animation: effectNext 0.5s linear 1 forwards;
+   /* Menerapkan animasi `effectNext` selama 0,5 detik, 
+   dengan kecepatan konstan (linear), diputar sekali (1), dan tetap dalam keadaan akhir animasi (forwards) */
+}
+
+/* Animasi untuk efek pergeseran saat berpindah ke slide berikutnya */
+@keyframes effectNext {
+   from {
+      transform: translateX(150px);
+      /* Mulai dari posisi 150px ke kanan dari posisi aslinya */
+   }
+}
+
+
+/* element class item 2 */
+.carousel.prev .list .item:nth-child(2) {
+   z-index: 2;
+   /* Mengatur urutan tumpukan elemen agar elemen ini muncul di atas elemen lain yang memiliki z-index lebih rendah */
+}
+
+/* element class item 2, animasi untuk gambar */
+.carousel.prev .list .item:nth-child(2) img {
+   animation: outFrame 0.5s linear 1 forwards;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+}
+
+@keyframes outFrame {
+   to {
+      width: 150px;
+      /* Mengatur lebar gambar menjadi 150px */
+      height: 200px;
+      /* Mengatur tinggi gambar menjadi 200px */
+      bottom: 13%;
+      /* Mengatur posisi bawah gambar menjadi 13% dari tinggi elemen induknya */
+      left: 50%;
+      /* Mengatur posisi kiri gambar menjadi 50% dari lebarnya elemen induknya */
+      border-radius: 10px;
+      /* Mengatur sudut membulat gambar menjadi 10px */
+   }
+}
+
+
+/* element class thumbnail, animasi untuk thumbnail bergeser ke kanan Waktu munculnya gambar */
+.carousel.prev .thumbnail .item:first-child {
+   overflow: hidden;
+   /* Mengatur elemen `overflow` ke `hidden` */
+   opacity: 0;
+   animation: showThumbnail 0.5s linear 1 forwards;
+   /* Menerapkan animasi `showThumbnail` selama 0,5 detik, 
+   berjalan dengan kecepatan konstan (linear), diputar sekali (1), dan tetap dalam keadaan akhir animasi (forwards) */
+}
+
+
+/* element khusus */
+.carousel.next .arrows button,
+.carousel.prev .arrows button,
+.carousel .buttons button {
+   cursor: pointer;
+}
+
+
+/* media query untuk smartphone */
+@media (max-width: 412px) {
+
+   /* samsung s20 ultra */
+   header a {
+      font-size: 0.8rem;
+   }
+
+   .carousel .list .item .content {
+      padding-right: 0;
+   }
+
+   .carousel .list .item .author {
+      font-size: 0.9rem;
+      margin: 0;
+      letter-spacing: 2px;
+   }
+
+   .carousel .list .item .title {
+      font-size: 1.3rem;
+      margin-top: 8px;
+      letter-spacing: 5px;
+   }
+
+   .carousel .list .item .topic {
+      font-size: 1.3rem;
+      margin-top: 5px;
+      letter-spacing: 2px;
+   }
+
+   .carousel .list .item .describe {
+      width: 70%;
+      font-size: 0.8rem;
+   }
+
+   .thumbnail .item {
+      width: 100px;
+      height: 150px;
+      bottom: 2%;
+      left: 5%;
+   }
+
+   .arrows {
+      position: absolute;
+      bottom: 7%;
+      right: 19%;
+   }
+
+   .arrows button {
+      width: 40px;
+      height: 40px;
+   }
+
+   /* element class item 2 */
+   .carousel.prev .list .item:nth-child(2) img {
+      animation: outFrame 0.5s linear 1 forwards;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+   }
+
+   @keyframes outFrame {
+      to {
+         width: 99px;
+         /* Mengatur lebar gambar menjadi 150px */
+         height: 150px;
+         /* Mengatur tinggi gambar menjadi 200px */
+         bottom: 13%;
+         /* Mengatur posisi bawah gambar menjadi 13% dari tinggi elemen induknya */
+         left: 56%;
+         /* Mengatur posisi kiri gambar menjadi 50% dari lebarnya elemen induknya */
+         border-radius: 10px;
+         /* Mengatur sudut membulat gambar menjadi 10px */
+      }
+   }
+}
+
+/* media query untuk tablet, gunakan min dan max untuk tidak mempengaruhi penampilan destop */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+   /* ipad mini */
+   header a {
+      font-size: 0.8rem;
+   }
+
+   .carousel .list .item .content {
+      padding-right: 0;
+   }
+
+   .carousel .list .item .author {
+      font-size: 0.9rem;
+      margin: 0;
+      letter-spacing: 2px;
+   }
+
+   .carousel .list .item .title {
+      font-size: 1.3rem;
+      margin-top: 8px;
+      letter-spacing: 5px;
+   }
+
+   .carousel .list .item .topic {
+      font-size: 1.3rem;
+      margin-top: 5px;
+      letter-spacing: 2px;
+   }
+
+   .carousel .list .item .describe {
+      width: 70%;
+      font-size: 0.8rem;
+   }
+
+   .thumbnail .item {
+      width: 100px;
+      height: 150px;
+      bottom: 2%;
+      left: 5%;
+   }
+
+   .arrows {
+      position: absolute;
+      bottom: 7%;
+      right: 33%;
+   }
+
+   .arrows button {
+      width: 40px;
+      height: 40px;
+   }
+
+   .carousel.prev .list .item:nth-child(2) img {
+      animation: outFrame 0.5s linear 1 forwards;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+   }
+
+   @keyframes outFrame {
+      to {
+         width: 100px;
+         /* Mengatur lebar gambar menjadi 150px */
+         height: 150px;
+         /* Mengatur tinggi gambar menjadi 200px */
+         bottom: 13%;
+         /* Mengatur posisi bawah gambar menjadi 13% dari tinggi elemen induknya */
+         left: 53%;
+         /* Mengatur posisi kiri gambar menjadi 50% dari lebarnya elemen induknya */
+         border-radius: 10px;
+         /* Mengatur sudut membulat gambar menjadi 10px */
+      }
+   }
+}
