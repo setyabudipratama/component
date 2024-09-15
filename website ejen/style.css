@@ -528,6 +528,7 @@ footer {
     left: 0;
 }
 
+/* class container */
 footer .container {
     display: flex;
     justify-content: space-evenly;
@@ -535,6 +536,7 @@ footer .container {
     height: 100%;
 }
 
+/* tag img */
 footer .container img {
     width: 50px;
     height: 50px;
@@ -544,6 +546,7 @@ footer .container img {
     cursor: default;
 }
 
+/* class contact dan sosial */
 footer .container .contact,
 footer .container .sosial {
     display: flex;
@@ -551,6 +554,7 @@ footer .container .sosial {
     row-gap: 5px;
 }
 
+/* tag h2 */
 footer .container h2 {
     margin: 5px 0;
     font-size: 1.3rem;
@@ -558,6 +562,7 @@ footer .container h2 {
     color: var(--black);
 }
 
+/* tag span */
 footer .container span {
     font-size: 1rem;
     cursor: default;
