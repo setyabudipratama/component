@@ -1,0 +1,375 @@
+:root {
+    --white: #dadada;
+    --black: #101010;
+}
+
+html,
+body {
+    position: relative;
+    /* Mengatur warna latar belakang */
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* halaman neuro */
+#neuro {
+    width: 100vw;
+    min-height: 80vh;
+    background: linear-gradient(to right, #abab03, #000000);
+}
+
+/* class btn */
+#neuro .btn {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 1.1rem;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--white);
+    color: var(--white);
+    text-decoration: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#neuro .btn:hover {
+    transform: scale(1.1);
+    background: var(--white);
+    color: var(--black);
+}
+
+/* class container */
+#neuro .container {
+    width: 100%;
+    height: 100%;
+}
+
+/* class content */
+#neuro .container .content {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class image */
+#neuro .container .content .image {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    top: 90px;
+}
+
+/* tag img */
+#neuro .container .content .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#neuro .container .content .image:hover img {
+    transform: scale(1.2);
+}
+
+/* class text */
+#neuro .container .content .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    top: 90px;
+    width: 400px;
+}
+
+/* class anggota */
+#neuro .anggota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    position: relative;
+    top: 90px;
+    margin: 0;
+    color: var(--white);
+}
+
+/* tag h2 */
+#neuro .anggota h2 {
+    font-size: 1.5rem;
+}
+
+
+/* halaman tekno */
+#tekno {
+    width: 100vw;
+    min-height: 80vh;
+    background: linear-gradient(to left, #ab0303, #000000), #a50000;
+}
+
+/* class container */
+#tekno .container {
+    width: 100%;
+    height: 100%;
+}
+
+/* class content */
+#tekno .container .content {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class text */
+#tekno .container .content .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    top: 70px;
+    width: 400px;
+}
+
+/* class anggota */
+#tekno .anggota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    position: relative;
+    top: 60px;
+    margin: 0;
+    color: var(--white);
+}
+
+/* tag h2 */
+#tekno .anggota h2 {
+    font-size: 1.5rem;
+}
+
+/* class image */
+#tekno .container .content .image {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    top: 70px;
+}
+
+/* tag img */
+#tekno .container .content .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#tekno .container .content .image:hover img {
+    transform: scale(1.2);
+}
+
+
+/* halaman inviso */
+#inviso {
+    width: 100vw;
+    min-height: 80vh;
+    background: linear-gradient(to right, #929292, #000000), #a50000;
+}
+
+/* class container */
+#inviso .container {
+    width: 100%;
+    height: 100%;
+}
+
+/* class content */
+#inviso .container .content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class image */
+#inviso .container .content .image {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    top: 70px;
+}
+
+/* tag img */
+#inviso .container .content .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#inviso .container .content .image:hover img {
+    transform: scale(1.2);
+}
+
+/* class text */
+#inviso .container .content .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    top: 70px;
+    width: 400px;
+}
+
+/* class anggota */
+#inviso .anggota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    position: relative;
+    top: 60px;
+    margin: 0;
+    color: var(--white);
+}
+
+/* tag h2 */
+#inviso .anggota h2 {
+    font-size: 1.5rem;
+}
+
+
+/* halaman kombat */
+#kombat {
+    width: 100vw;
+    min-height: 80vh;
+    background: linear-gradient(to left, #0008ff, #000000), #a50000;
+}
+
+/* class container */
+#kombat .container {
+    width: 100%;
+    height: 100%;
+}
+
+/* class content */
+#kombat .container .content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class text */
+#kombat .container .content .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    top: 90px;
+    width: 400px;
+}
+
+/* class anggota */
+#kombat .anggota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    position: relative;
+    top: 90px;
+    margin: 0;
+    color: var(--white);
+}
+
+/* tag h2 */
+#kombat .anggota h2 {
+    font-size: 1.5rem;
+}
+
+/* class image */
+#kombat .container .content .image {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    top: 90px;
+}
+
+/* tag img */
+#kombat .container .content .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+#kombat .container .content .image:hover img {
+    transform: scale(1.2);
+}
+
+/* class btn */
+#kombat .btn {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: 1.1rem;
+    background: none;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#kombat .btn:hover {
+    transform: scale(1.1);
+    background-color: var(--white);
+    color: var(--black);
+}
