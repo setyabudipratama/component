@@ -554,6 +554,11 @@ footer .container .sosial {
     row-gap: 5px;
 }
 
+/* tag i */
+footer .container i {
+    font-size: 1.1rem;
+}
+
 /* tag h2 */
 footer .container h2 {
     margin: 5px 0;
