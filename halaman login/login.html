@@ -43,9 +43,16 @@
             </button>
 
             <div class="register">
-                <p>Tidak Punya Akun? <a href="registrasi.html">Registrasi</a></p>
+                <p>Tidak Punya Akun? <a href="#">Registrasi</a></p>
             </div>
         </form>
     </section>
+
+    <script>
+        const login = document.querySelector('.login a');
+        login.addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+    </script>
 </body>
 </html>
