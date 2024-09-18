@@ -327,6 +327,7 @@ strong {
     }
 }
 
+.login,
 .register {
     font-size: 0.9rem;
     color: #fff;
@@ -334,6 +335,7 @@ strong {
     margin: 25px 0 10px;
 }
 
+.login p a,
 .register p a {
     text-decoration: none;
     color: #fff;
@@ -341,6 +343,7 @@ strong {
     transition: 0.3s;
 }
 
+.login p a:hover,
 .register p a:hover {
     text-decoration: underline;
 }
