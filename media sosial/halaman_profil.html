@@ -68,19 +68,19 @@
     <footer>
         <ul class="icon">
             <li class="home">
-                <a href="halaman_utama.html">
+                <a href="#">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                 </a>
             </li>
             <li class="search">
-                <a href="halaman_beranda.html">
+                <a href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span>Search</span>
                 </a>
             </li>
             <li class="video">
-                <a href="halaman_video.html">
+                <a href="#">
                     <i class="fa-solid fa-film"></i>
                     <span>Video</span>
                 </a>
@@ -93,6 +93,21 @@
             </li>
         </ul>
     </footer>
+
+    <script>
+        const home = document.querySelector('.icon .home');
+        home.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+        const search = document.querySelector('.icon .search');
+        search.addEventListener('click', () => {
+            window.location.href = 'halaman_beranda.html';
+        });
+        const video = document.querySelector('.icon .video');
+        video.addEventListener('click', () => {
+            window.location.href = 'halaman_video.html';
+        });
+    </script>
 </body>
 
 </html>
