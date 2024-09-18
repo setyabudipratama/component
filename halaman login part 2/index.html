@@ -308,7 +308,7 @@
             </div>
             <div class="links">
                 <a href="#">Lupa Kata Sandi</a>
-                <a href="register.html">Register</a>
+                <a href="#">Register</a>
             </div>
             <button class="btn" type="submit" id="">Login</button>
             <div class="icons">
@@ -317,5 +317,12 @@
             </div>
         </form>
     </div>
+
+    <script>
+        const register = document.querySelector(".links a:last-child");
+        register.addEventListener("click", () => {
+            window.location = "register.html";
+        });
+    </script>
 </body>
 </html>
