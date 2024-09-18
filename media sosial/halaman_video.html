@@ -40,13 +40,13 @@
     <footer id="footer">
         <ul class="icon">
             <li class="home">
-                <a href="halaman_utama.html">
+                <a href="#">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                 </a>
             </li>
             <li class="search">
-                <a href="halaman_beranda.html">
+                <a href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span>Search</span>
                 </a>
@@ -58,13 +58,28 @@
                 </a>
             </li>
             <li class="profile">
-                <a href="halaman_profil.html">
+                <a href="#">
                     <img src="gambar\IMG_20240610_232649.jpg" alt="Setya Budi Pratama">
                     <span>Profile</span>
                 </a>
             </li>
         </ul>
     </footer>
+
+    <script>
+        const home = document.querySelector('.icon .home');
+        home.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+        const search = document.querySelector('.icon .search');
+        search.addEventListener('click', () => {
+            window.location.href = 'halaman_beranda.html';
+        });
+        const profile = document.querySelector('.icon .profile');
+        profile.addEventListener('click', () => {
+            window.location.href = 'halaman_profil.html';
+        });
+    </script>
 </body>
 
 </html>
