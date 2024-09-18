@@ -255,13 +255,17 @@
                 <i></i>
             </div>
             <div class="links">
-                <a href="login.html">Login</a>
+                <a href="#">Login</a>
             </div>
             <button class="btn" type="submit" id="">Register</button>
-            <!-- <div class="register">
-                <p>Tidak punya akun? <a href="#">Register</a></p>
-            </div> -->
         </form>
     </div>
+
+    <script>
+        const login = document.querySelector(".links a:first-child");
+        login.addEventListener("click", () => {
+            window.location = "login.html";
+        });
+    </script>
 </body>
 </html>
