@@ -43,10 +43,17 @@
                 </div>
             </button>
 
-            <div class="register">
-                <p>Sudah Punya Akun? <a href="login.html">Login</a></p>
+            <div class="login">
+                <p>Sudah Punya Akun? <a href="#">Login</a></p>
             </div>
         </form>
     </section>
+
+    <script>
+        const login = document.querySelector('.login a');
+        login.addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+    </script>
 </body>
 </html>
