@@ -1,0 +1,445 @@
+:root {
+    --white: #cefdff;
+    --black: #171717;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('gambar/trawas.jpg') no-repeat center center/cover;
+    z-index: 0;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Mengurangi kecerahan */
+    z-index: -1; /* Agar lapisan berada di belakang konten header */
+}
+
+/* navbar */
+header .header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0;
+    background-color: #085116;
+}
+
+/* class logo */
+header .header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    padding: 0;
+}
+
+/* tag i logo */
+header .header .logo i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--white);
+    cursor: default;
+    animation: none;
+}
+
+/* tag h3 */
+header .header .logo h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: default;
+    font-family: 'Pacifico';
+}
+
+/* tag ul */
+header .header ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 0;
+    right: 5%;
+    list-style: none;
+    /* background: transparent;
+    backdrop-filter: blur(1rem); */
+    padding: 8px 10px;
+    gap: 50px;
+    border-radius: 10px;
+}
+
+/* tag li */
+header .header ul li {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+header .header ul li:hover {
+    background: var(--white);
+    color: var(--black);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* class content */
+header .content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20%;
+    left: 10%;
+    gap: 20px;
+    color: var(--white);
+}
+
+/* tag h1 */
+header .content h1 {
+    font-family: pacifico;
+    font-size: 3rem;
+    margin: 0;
+    cursor: default;
+}
+
+/* tag h2 */
+header .content h2 {
+    font-family: pacifico;
+    font-size: 1.5rem;
+    margin: 0;
+    cursor: default;
+}
+
+/* class btn */
+header .content .btn {
+    font-size: 1rem;
+    width: 150px;
+    height: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+header .content .btn:hover {
+    transform: scale(1.1);
+    background: var(--white);
+    color: var(--black);
+}
+
+/* tag h3 */
+header .content h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    cursor: default;
+}
+
+/* tag p */
+header .content p {
+    font-size: 1rem;
+    width: 400px;
+    margin: 0;
+    cursor: default;
+}
+
+
+/* halaman fasilitas */
+section {
+    margin: 0;
+    padding: 0;
+}
+
+/* id fasilitas */
+#fasilitas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #b7fbfe;
+}
+
+/* class desc */
+#fasilitas .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 30%;
+    left: 10%;
+    gap: 20px;
+}
+
+/* tag h2 */
+#fasilitas .desc h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-family: pacifico;
+    cursor: default;
+}
+
+/* tag p */
+#fasilitas .desc p {
+    width: 300px;
+    font-size: 1.5rem;
+    margin: 0;
+    cursor: default;
+}
+
+/* class slider */
+#fasilitas .slider {
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    top: -70px;
+    left: 40%;
+    width: 749px;
+    height: auto;
+}
+
+#fasilitas .slider .title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* tag img */
+#fasilitas .slider .title img {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+/* tag h2 */
+#fasilitas .slider .title h2 {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width: 100px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--white);
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 0.5s ease;
+}
+
+#fasilitas .slider .title img:hover{
+    filter: brightness(0.5);
+    transform: scale(1.1);
+}
+
+#fasilitas .slider .title img:hover + h2{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* halaman ulasan */
+#ulasan {
+    position: relative;
+    width: 100vw;
+    min-height: 50vh;
+    background-color: #b7fbfe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* class title */
+#ulasan .title {
+    font-size: 2.5rem;
+    font-family: pacifico;
+    margin: 0;
+    cursor: default;
+}
+
+/* class container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #00acd2;
+    border-radius: 10px;
+}
+
+/* class picture */
+#ulasan .container .picture {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* tag img */
+#ulasan .container .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+#ulasan .container .picture:hover img {
+    transform: scale(1.2);
+}
+
+/* class desc */
+#ulasan .container .desc {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 200px;
+    gap: 2px;
+    cursor: default;
+}
+
+/* tag h2 */
+#ulasan .container .desc h2 {
+    font-size: 1.2rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* tag i */
+#ulasan .container .desc i {
+    font-size: 0.8rem;
+    color: gold;
+}
+
+/* tag p */
+#ulasan .container .desc p {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+/* class text muted */
+#ulasan .container .desc .text-muted {
+    font-size: 1rem;
+    color: #2d2d2d;
+}
+
+
+/* halaman footer */
+footer {
+    position: relative;
+    width: 100vw;
+    min-height: 20vh;
+    background-color: #085116;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* tag img */
+footer img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/* class contact */
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 0;
+    color: var(--white);
+}
+
+/* tag h2 */
+footer .contact h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+/* tag span */
+footer .contact span {
+    margin: 0;
+    font-size: 1rem;
+    cursor: default;
+}
+
+/* tag i */
+footer .contact i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+/* class sosial */
+footer .sosial {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 0;
+    color: var(--white);
+}
+
+/* tag h2 */
+footer .sosial h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+/* tag span */
+footer .sosial span {
+    margin: 0;
+    font-size: 1rem;
+    cursor: default;
+}
+
+/* tag i */
+footer .sosial i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
