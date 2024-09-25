@@ -1,0 +1,525 @@
+:root {
+    --white: #ffffff;
+    --background: beige;
+    --black: rgb(21, 21, 21);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* navbar */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(175, 175, 0);
+    padding: 5px 50px;
+    z-index: 1000;
+}
+
+.navbar .fa-instagram,
+.navbar .fa-linkedin-in {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+
+/* halaman header */
+header {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* class container */
+header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* class desc */
+header .container .desc {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 400px;
+    color: var(--black);
+    cursor: default;
+}
+
+/* tag h1 */
+header .container .desc h1 {
+    font-size: 2rem;
+    font-family: pacifico;
+    line-height: 50px;
+    /* column-width: 80px; */
+}
+
+/* class fa-circle-down */
+header .container .fa-circle-down {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: var(--black);
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* class fa-circle-down */
+header .container .fa-circle-down:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* class picture */
+header .container .picture {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* tag img */
+header .container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+/* tag img:hover */
+header .container .picture:hover img {
+    transform: scale(1.3);
+}
+
+
+/* halaman arrivals */
+section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* id arrivals */
+#arrivals {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* class container */
+#arrivals .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+}
+
+/* class desc */
+#arrivals .container .desc {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    width: 500px;
+    color: var(--black);
+    cursor: default;
+}
+
+/* tag h1 */
+#arrivals .container .desc h1 {
+    font-size: 2rem;
+    font-family: pacifico;
+}
+
+/* class fa-circle-down */
+#arrivals .container .fa-circle-down {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: var(--black);
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* class fa-circle-down */
+#arrivals .container .fa-circle-down:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* class slider */
+#arrivals .container .slider {
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    top: 5%;
+    right: -5%;
+    max-width: 600px;
+    min-height: 70vh;
+    margin: 0;
+    height: auto;
+    column-gap: 20px;
+    border-bottom: 3px solid var(--black);
+}
+
+/* class template */
+#arrivals .container .slider .template {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* tag img */
+#arrivals .container .slider img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    transition: 0.3s ease;
+}
+
+/* tag h3 */
+#arrivals .container .slider h3 {
+    position: relative;
+    top: -25%;
+    left: 0;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: default;
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: 0.3s ease;
+}
+
+/* tag p */
+#arrivals .container .slider p {
+    position: relative;
+    top: -23%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    cursor: default;
+    opacity: 0;
+    transform: translateX(30%);
+    transition: 0.3s ease;
+}
+
+/* tag img:hover + h3 + p */
+#arrivals .container .slider img:hover + h3 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#arrivals .container .slider img:hover + h3 + p {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#arrivals .container .slider img:hover {
+    filter: brightness(0.5);
+}
+
+/* class btn */
+#arrivals .container .slider .btn {
+    position: relative;
+    top: -15%;
+    left: 0;
+    border: none;
+    box-shadow: 5px 5px 10px var(--black);
+}
+
+#arrivals .container .slider .btn:hover {
+    color: var(--white);
+    background-color: var(--black);
+    border: none;
+}
+
+
+/* halaman galerry */
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+    row-gap: 10px;
+}
+
+/* tag h1 */
+#gallery h1 {
+    font-size: 2rem;
+    font-family: pacifico;
+    margin-top: 20px;
+}
+
+/* class container */
+#gallery .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 0;
+}
+
+/* class slide */
+#gallery .container .slide {
+    position: relative;
+    top: 0;
+    width: 70%;
+    height: auto;
+}
+
+/* tag img */
+#gallery .container .slide .carousel-inner .carousel-item img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+/* class control */
+#gallery .container .slide .carousel-control-prev .carousel-control-prev-icon,
+#gallery .container .slide .carousel-control-next .carousel-control-next-icon {
+    background-color: var(--black);
+}
+
+/* class fa-angles-up */
+#gallery .fa-angles-up {
+    position: absolute;
+    top: 85%;
+    left: 85%;
+    font-size: 2rem;
+    color: var(--black);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* class fa-angles-up */
+#gallery .fa-angles-up:hover {
+    transform: scale(1.2);
+}
+
+
+/* halaman footer */
+footer {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-height: 10vh;
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class cipta */
+footer .cipta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 0;
+}
+
+/* tag h5 */
+footer .cipta h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+/* tag img */
+footer .cipta img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/* class contact */
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 0;
+    color: var(--black);
+}
+
+/* tag h2 */
+footer .contact h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    cursor: default;
+}
+
+/* tag span */
+footer .contact span {
+    margin: 0;
+    font-size: 1rem;
+    cursor: default;
+}
+
+/* tag i */
+footer .contact i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+/* class sosial */
+footer .sosial {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 0;
+    color: var(--black);
+}
+
+/* tag h2 */
+footer .sosial h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    cursor: default;
+}
+
+/* tag span */
+footer .sosial span {
+    margin: 0;
+    font-size: 1rem;
+    cursor: default;
+}
+
+/* tag i */
+footer .sosial i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+    header,
+    section {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        width: 100%;
+        height: 70vh;
+    }
+
+    header .container {
+        column-gap: 10px;
+    }
+
+    #arrivals {
+        width: 100%;
+        height: 70vh;
+    }
+
+    #arrivals .container {
+        gap: 0;
+    }
+
+    #arrivals .container .desc {
+        width: 500px;
+    }
+
+    #arrivals .container .slider h3 {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
+    
+    #arrivals .container .slider p {
+        position: absolute;
+        top: 40%;
+        left: 25%;
+    }
+
+    #arrivals .container .slider {
+        top: 20%;
+        left: 0;
+        width: 400px;
+    }
+
+    #gallery {
+        width: 100%;
+        height: 70vh;
+    }
+
+    #gallery .fa-angles-up {
+        top: 90%;
+        left: 80%;
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    footer .cipta h5 {
+        font-size: 0.8rem;
+    }
+
+    footer .contact,
+    footer .sosial {
+        gap: 0;
+    }
+
+    footer span {
+        font-size: 1rem;
+    }
+}
