@@ -8,18 +8,55 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   <header>
-      <a href="#">Home</a>
-      <a href="#">Contacts</a>
-      <a href="#">About Us</a>
-      <a href="#">Models</a>
-      <a href="#">Market Place</a>
-   </header>
-
+   <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Shop</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                     aria-expanded="false">
+                     Social
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="https://www.instagram.com/sy.setyabudi/"><i
+                              class="fa-brands fa-instagram"></i>sy.setyabudi</a>
+                     </li>
+                     <li><a class="dropdown-item" href="https://www.linkedin.com/in/setya-budi-b08623317/"><i
+                              class="fa-brands fa-linkedin-in"></i>setya budi</a>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="#">FAQ</a></li>
+                  </ul>
+               </li>
+            </ul>
+            <form class="d-flex" role="search">
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+         </div>
+      </div>
+   </nav>
+   
    <!-- halaman carousel -->
    <div class="carousel">
       <div class="list">
@@ -158,6 +195,9 @@
       </div>
    </div>
 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script src="script.js"></script>
 </body>
 
