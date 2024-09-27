@@ -4,25 +4,40 @@ body {
    padding: 0;
 }
 
-
-/* element header */
-header {
+/* class navbar */
+.navbar {
    background: linear-gradient(90deg, rgba(2, 0, 36, 1), rgba(9, 9, 121, 1), rgba(0, 212, 255, 1));
-   /* Mengatur warna latar belakang */
    animation: bg 5s linear infinite;
-   /* Mengatur animasi warna latar belakang */
-   width: 100%;
-   /* Mengatur lebar elemen agar memenuhi lebar kontainer */
-   max-width: 100%;
-   /* Mengatur lebar maksimum elemen agar tidak melebihi lebar kontainer */
    margin: auto;
    height: 50px;
    display: flex;
-   /* Mengatur elemen sebagai flex container */
    align-items: center;
-   justify-content: space-around;
+   justify-content: center;
+   padding: 5px 50px;
    position: relative;
+   top: 0;
    z-index: 100;
+}
+
+/* class fa-house */
+.navbar .fa-house {
+   color: #ffffff;
+}
+
+/* class nav-link */
+.navbar .nav-item .nav-link {
+   color: #ffffff;
+   background-color: #000863;
+   border-radius: 5px;
+   padding: 5px 10px;
+   margin-top: 5px;
+}
+
+/* class fa-instagram, fa-linkedin-in */
+.navbar .fa-instagram,
+.navbar .fa-linkedin-in {
+    margin-right: 10px;
+    font-size: 1.3rem;
 }
 
 @keyframes bg {
@@ -31,119 +46,56 @@ header {
    }
 }
 
-/* element a */
-header a {
-   position: relative;
-   /* Mengatur posisi efek hover */
-   color: #ffffff;
-   font-size: 0.9rem;
-   text-decoration: none;
-   transition: all 0.3s ease;
-   /* Mengatur efek transisi */
-}
 
-header a:after {
-   position: absolute;
-   /* Mengatur posisi efek after */
-   content: "";
-   width: auto;
-   height: auto;
-   margin: -5px;
-   /* Mengatur jarak efek atau ukuran background hover */
-   inset: 0;
-   background: rgb(255, 255, 255);
-   /* Mengatur warna efek */
-   scale: 0 0;
-   /* Mengatur ukuran efek setelah ditransisi */
-   z-index: -1;
-   transition: 0.45s;
-   /* Mengatur durasi transisi */
-   border-radius: 10px;
-}
-
-header a:hover {
-   position: relative;
-   /* Mengatur posisi efek hover */
-   width: auto;
-   height: auto;
-   font-weight: 600;
-   color: #6634ff;
-   /* merubah warna teks ketika kursor diarahkan */
-}
-
-header a:hover::after {
-   scale: 1 1;
-   /* Mengatur ukuran efek waktu hover dan setelah ditransisi */
-}
-
-
-/* element class carousel */
+/* class carousel */
 .carousel {
    width: 100%;
-   /* Mengatur lebar carousel agar memenuhi seluruh lebar layar atau kontainer induknya */
    height: 100vh;
-   /* Mengatur tinggi carousel agar memenuhi 100% dari tinggi viewport (tinggi layar) */
    margin-top: -50px;
-   /* Menggeser carousel ke atas sebesar 50px, bisa digunakan untuk overlap dengan elemen di atasnya */
    overflow: hidden;
    /* Menyembunyikan konten yang melampaui batas elemen carousel, menjaga konten tetap dalam batas carousel */
    position: relative;
-   /* Mengatur posisi carousel sebagai relatif, memungkinkan elemen di dalamnya diposisikan secara absolut */
 }
 
-/* element class list item*/
+/* class list item*/
 .carousel .list .item {
    width: 100%;
-   /* Mengatur lebar elemen agar mengambil 100% dari kontainer induknya */
    height: auto;
-   /* Mengatur tinggi elemen secara otomatis berdasarkan rasio aspeknya */
    position: absolute;
-   /* Mengatur posisi elemen secara absolut dalam kontainer induknya */
    inset: 0 0 0 0;
-   /* Menempatkan elemen di dalam kontainer, sehingga mengisi seluruh ruang kontainer */
 }
 
-/* element class img */
+/* tag img */
 .carousel .list .item img {
    width: 100%;
-   /* Mengatur lebar gambar agar memenuhi lebar kontainer induknya */
    height: 100%;
-   /* Mengatur tinggi gambar agar memenuhi tinggi kontainer induknya */
    object-fit: cover;
-   /* Memastikan gambar tetap menutupi seluruh area tanpa mengubah rasio aspeknya */
    filter: brightness(0.5);
-   /* Mengatur filter brightness untuk mengatur tingkat kecerahan gambar */
 }
 
 
-/* element class content */
+/* class content */
 .carousel .list .item .content {
    position: absolute;
-   /* Menempatkan elemen secara absolut dalam kontainer induknya (.item) */
    top: 15%;
    width: 100%;
-   /* Menentukan lebar elemen sebagai 1140px */
    max-width: 80%;
-   /* Memastikan lebar elemen tidak melebihi 80% dari lebar kontainernya */
    left: 45%;
    transform: translateX(-50%);
-   /* Menggeser elemen ke kiri sebesar 50% dari lebarnya sendiri untuk memusatkan posisi */
    padding-right: 30%;
    box-sizing: border-box;
-   /* Mengubah model kotak elemen sehingga padding dihitung dalam lebar dan tinggi total */
 }
 
-/* element class author */
+/* class author */
 .carousel .list .item .author {
    font-size: 1.2rem;
    font-weight: bold;
    color: #ffffff;
    letter-spacing: 5px;
-   /* Menambahkan jarak antar huruf sebesar 6px untuk memberi efek spacing lebar */
    margin-left: 4px;
 }
 
-/* element class title */
+/* class title */
 .carousel .list .item .title {
    font-size: 2.5rem;
    font-weight: bold;
@@ -151,7 +103,7 @@ header a:hover::after {
    margin-top: 10px;
 }
 
-/* element class topic */
+/* class topic */
 .carousel .list .item .topic {
    font-size: 2rem;
    font-weight: bold;
@@ -159,16 +111,13 @@ header a:hover::after {
    margin-bottom: 10px;
 }
 
-/* element class describe */
+/* class describe */
 .carousel .list .item .describe {
    width: 80%;
-   /* Mengatur lebar elemen agar memenuhi lebar kontainer induknya */
    height: auto;
-   /* Mengatur tinggi elemen secara otomatis berdasarkan rasio aspeknya */
    font-size: 1rem;
    color: #ffffff;
    text-align: center;
-   /* Mengatur posisi teks secara center */
 }
 
 .carousel .list .item .author,
@@ -178,21 +127,16 @@ header a:hover::after {
 }
 
 
-/* element class buttons */
+/* class buttons */
 .carousel .list .item .buttons {
    display: grid;
-   /* Mengatur elemen sebagai grid container */
    grid-template-columns: repeat(2, 100px);
-   /* Membuat dua kolom dengan lebar masing-masing 130px */
    grid-template-rows: 30px;
-   /* Membuat satu baris dengan tinggi 40px */
    gap: 20px;
-   /* Menambahkan jarak 10px antara kolom dan baris dalam grid */
    margin-top: 30px;
-   /* Menambahkan margin sebesar 20px di bagian atas elemen, memberi ruang antara elemen ini dan elemen di atasnya */
 }
 
-/* element button */
+/* button */
 .carousel .list .item .buttons button {
    border: none;
    background-color: #ffffff;
@@ -209,62 +153,42 @@ header a:hover::after {
    background-color: #fbff00;
    color: #0026ff;
    font-weight: 600;
-   /* Mengatur ketebalan teks */
+   /* Mengatur teks */
    border-radius: 10px;
    scale: 1.1;
    /* Menggeser elemen sebesar 10% */
 }
 
 
-/* element class black */
-/* .carousel .list .item .black {
-   width: 100%;
-   height: 100%;
-   border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.067), #000000);
-   position: absolute;
-   top: 0;
-   left: 0;
-} */
 
-
-/* element class thumbnails */
+/* class thumbnails */
 .thumbnail {
    position: absolute;
-   /* Mengatur posisi elemen secara absolut dalam kontainer induknya (.item) */
    bottom: 13%;
    left: 50%;
    width: max-content;
-   /* Mengatur lebar elemen agar memenuhi lebar kontainer induknya */
    z-index: 100;
-   /* Mengatur posisi elemen sebesar 100 */
    display: flex;
-   /* Mengatur elemen sebagai flex container */
    gap: 25px;
-   /* Mengatur jarak antara elemen thumbnail */
 }
 
-/* element class item */
+/* class item */
 .thumbnail .item {
    width: 150px;
-   /* Mengatur lebar elemen thumbnail */
    height: 200px;
-   /* Mengatur tinggi elemen thumbnail */
    flex-shrink: 0;
-   /* Mengatur elemen tidak memperkecil lebarnya */
    position: relative;
-   /* Mengatur posisi elemen secara relatif dalam elemen thumbnail */
 }
 
-/* element img */
+/* tag img */
 .thumbnail .item img {
    width: 100%;
    height: 100%;
    object-fit: cover;
-   /* Mengatur objek gambar untuk menyesuaikan ukuran lebar dan tinggi */
    border-radius: 10px;
 }
 
-/* element class content */
+/* class content */
 .thumbnail .item .content {
    color: white;
    position: absolute;
@@ -273,7 +197,7 @@ header a:hover::after {
    right: 10px;
 }
 
-/* element class title */
+/* class title */
 .thumbnail .item .content .title {
    display: flex;
    justify-content: center;
@@ -283,24 +207,20 @@ header a:hover::after {
 }
 
 
-/* element class arrows */
+/* class arrows */
 .arrows {
    position: absolute;
-   /* Mengatur posisi elemen secara absolut */
    bottom: 2%;
    right: 39%;
    z-index: 100;
    width: max-content;
    max-width: 30%;
    display: flex;
-   /* Mengatur elemen sebagai flex container */
    gap: 30px;
-   /* Mengatur jarak antara elemen tombol */
    align-items: center;
-   /* Mengatur aligment elemen vertikal */
 }
 
-/* element button */
+/* tag button */
 .arrows button {
    width: 50px;
    /* Mengatur lebar tombol */
@@ -320,20 +240,17 @@ header a:hover::after {
 
 .arrows button:hover {
    background-color: rgba(255, 255, 255, 0.5);
-   /* Mengatur warna latar belakang tombol ketika dihover */
    color: black;
-   /* Mengatur warna teks tombol ketika dihover */
    transform: scale(1.1);
 }
 
 
-/* element class item in the first item */
+/* class item in the first item */
 .carousel .list .item:first-child {
    z-index: 1;
-   /* Mengatur urutan tumpukan elemen agar elemen ini muncul di atas elemen lain yang memiliki z-index lebih rendah */
 }
 
-/* element class author, title, topic, describe, buttons */
+/* class author, title, topic, describe, buttons */
 /* .carousel .list .item:first-child .content .author, */
 .carousel .list .item:first-child .content .title,
 .carousel .list .item:first-child .content .topic,
@@ -367,7 +284,7 @@ header a:hover::after {
    }
 }
 
-/* animasi delay untuk element class title, topic, describe, buttons */
+/* animasi delay untuk class title, topic, describe, buttons */
 .carousel .list .item:first-child .content .title {
    animation-delay: 1s !important;
    /* Mengatur delay 1 detik */
@@ -389,7 +306,7 @@ header a:hover::after {
 }
 
 
-/* element class title, topic, describe */
+/* class title, topic, describe */
 .carousel.prev .list .item:nth-child(2) .content .title,
 .carousel.prev .list .item:nth-child(2) .content .topic,
 .carousel.prev .list .item:nth-child(2) .content .describe,
@@ -408,7 +325,7 @@ header a:hover::after {
    }
 }
 
-/* animasi delay untuk element class title, topic, describe, buttons */
+/* animasi delay untuk class title, topic, describe, buttons */
 .carousel .list .item:nth-child(2) .content .title {
    animation-delay: 0.5s !important;
    /* Mengatur delay 0.5 detik */
@@ -430,7 +347,7 @@ header a:hover::after {
 }
 
 
-/* animasi untuk gambar waktu muncul element class img*/
+/* animasi untuk gambar waktu muncul class img*/
 .carousel.next .list .item:first-child img {
    width: 150px;
    /* Mengatur lebar gambar saat animasi dimulai */
@@ -484,13 +401,13 @@ header a:hover::after {
 }
 
 
-/* element class item image */
+/* class item image */
 /* .carousel.prev .list .item img {
    z-index: 100;
 } */
 
 
-/* element class thumbnail, animasi untuk thumbnail bergeser ke kiri waktu munculnya gambar */
+/* class thumbnail, animasi untuk thumbnail bergeser ke kiri waktu munculnya gambar */
 .carousel.next .thumbnail {
    animation: effectNext 0.5s linear 1 forwards;
    /* Menerapkan animasi `effectNext` selama 0,5 detik, 
@@ -506,13 +423,13 @@ header a:hover::after {
 }
 
 
-/* element class item 2 */
+/* class item 2 */
 .carousel.prev .list .item:nth-child(2) {
    z-index: 2;
    /* Mengatur urutan tumpukan elemen agar elemen ini muncul di atas elemen lain yang memiliki z-index lebih rendah */
 }
 
-/* element class item 2, animasi untuk gambar */
+/* class item 2, animasi untuk gambar */
 .carousel.prev .list .item:nth-child(2) img {
    animation: outFrame 0.5s linear 1 forwards;
    position: absolute;
@@ -536,7 +453,7 @@ header a:hover::after {
 }
 
 
-/* element class thumbnail, animasi untuk thumbnail bergeser ke kanan Waktu munculnya gambar */
+/* class thumbnail, animasi untuk thumbnail bergeser ke kanan Waktu munculnya gambar */
 .carousel.prev .thumbnail .item:first-child {
    overflow: hidden;
    /* Mengatur elemen `overflow` ke `hidden` */
@@ -547,7 +464,7 @@ header a:hover::after {
 }
 
 
-/* element khusus */
+/* tag button */
 .carousel.next .arrows button,
 .carousel.prev .arrows button,
 .carousel .buttons button {
@@ -556,7 +473,7 @@ header a:hover::after {
 
 
 /* media query untuk smartphone */
-@media (max-width: 412px) {
+@media screen and (max-width: 768px) {
 
    /* samsung s20 ultra */
    header a {
@@ -600,7 +517,7 @@ header a:hover::after {
    .arrows {
       position: absolute;
       bottom: 7%;
-      right: 19%;
+      right: 20%;
    }
 
    .arrows button {
