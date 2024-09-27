@@ -49,7 +49,8 @@ header {
 /* class container */
 header .container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -58,8 +59,8 @@ header .container .desc {
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 0;
     top: 0;
+    left: 0;
     width: 400px;
     color: var(--black);
     cursor: default;
@@ -98,6 +99,7 @@ header .container .fa-circle-down:hover {
 
 /* class picture */
 header .container .picture {
+    margin: 0;
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -142,9 +144,9 @@ section {
 /* class container */
 #arrivals .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    column-gap: 50px;
 }
 
 /* class desc */
@@ -320,7 +322,7 @@ section {
 
 /* tag img */
 #gallery .container .slide .carousel-inner .carousel-item img {
-    width: 300px;
+    width: 100%;
     height: 400px;
     object-fit: cover;
     filter: brightness(0.7);
@@ -381,6 +383,7 @@ footer .cipta h5 {
 /* tag img */
 footer .cipta img {
     position: relative;
+    top: 0;
     width: 50px;
     height: 50px;
     margin: 0;
@@ -392,7 +395,6 @@ footer .cipta img {
 footer .contact {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
     margin: 0;
     color: var(--black);
 }
@@ -400,14 +402,14 @@ footer .contact {
 /* tag h2 */
 footer .contact h2 {
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1rem;
     cursor: default;
 }
 
 /* tag span */
 footer .contact span {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: default;
 }
 
@@ -421,7 +423,6 @@ footer .contact i {
 footer .sosial {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
     margin: 0;
     color: var(--black);
 }
@@ -429,14 +430,14 @@ footer .sosial {
 /* tag h2 */
 footer .sosial h2 {
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1rem;
     cursor: default;
 }
 
 /* tag span */
 footer .sosial span {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: default;
 }
 
@@ -456,29 +457,46 @@ footer .sosial i {
 
     header {
         width: 100%;
-        height: 70vh;
+        height: 95vh;
+        gap: 0;
     }
 
-    header .container {
-        column-gap: 10px;
+    header .container .desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    header .container .desc h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .container .picture {
+        position: relative;
+        top: -50px;
     }
 
     #arrivals {
         width: 100%;
-        height: 70vh;
-    }
-
-    #arrivals .container {
-        gap: 0;
+        height: 100vh;
     }
 
     #arrivals .container .desc {
         width: 500px;
+        position: relative;
+        top: 10%;
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
 
     #arrivals .container .slider h3 {
         position: absolute;
-        top: 30%;
+        top: 35%;
         left: 10%;
     }
     
@@ -489,14 +507,31 @@ footer .sosial i {
     }
 
     #arrivals .container .slider {
-        top: 20%;
+        top: 15%;
         left: 0;
         width: 400px;
     }
 
+    #arrivals .container .slider .btn {
+        top: 5%;
+    }
+
     #gallery {
         width: 100%;
-        height: 70vh;
+        height: 100vh;
+    }
+
+    #gallery .container {
+        width: 100%;
+    }
+
+    #gallery .container .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        top: 10%;
     }
 
     #gallery .fa-angles-up {
