@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playwrite+DE+Grund:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <form class="container-fluid justify-content-end">
+            <button class="btn btn-outline-success" id="loginBtn" type="button">Login</button>
+        </form>
+    </nav>
+
+    <div class="container">
+        <div class="form login" id="login">
+            <form action="" method="">
+                <h1>Login</h1>
+                <div class="form-floating mb-3">
+                    <input type="Username" class="form-control" id="floatingInput" placeholder="Username" required>
+                    <label for="floatingInput">Username</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="opsi">
+                    <label><input type="checkbox">Remember Me</label>
+                    <a href="#" id="showSignup">register</a>
+                </div>
+                <button type="button" class="btn btn-outline-secondary">Login</button>
+                <div class="icon">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </form>
+        </div>
+        <div class="form signup" id="signup">
+            <form action="" method="">
+                <h1>Sign Up</h1>
+                <div class="row">
+                    <div class="form-floating col">
+                        <input type="text" class="form-control" placeholder="First name" required>
+                        <label for="floatingInput">First name</label>
+                    </div>
+                    <div class="form-floating col">
+                        <input type="text" class="form-control" placeholder="Last name" required>
+                        <label for="floatingInput">Last name</label>
+                    </div>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Username" required>
+                    <label for="floatingInput">Username</label>
+                </div>
+                <div class="row">
+                    <div class="form-floating col">
+                        <input type="password" class="form-control" placeholder="Password" required>
+                        <label for="floatingInput">Password</label>
+                    </div>
+                    <div class="form-floating col">
+                        <input type="password" class="form-control" placeholder="Confirm" required>
+                        <label for="floatingInput">Confirm</label>
+                    </div>
+                </div>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                    <option selected disabled>Gender..</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select>
+                <div class="opsi">
+                    <a href="#" id="showLogin">login</a>
+                </div>
+                <button type="button" class="btn btn-outline-secondary">Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
