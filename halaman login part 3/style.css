@@ -1,0 +1,275 @@
+:root {
+    --white: #e6e6e6;
+    --black: #151515;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    animation: BgAnimation 8s linear infinite;
+}
+
+@keyframes BgAnimation {
+    0% {
+        background-image: url('gambar/ruang utama.jpg');
+    }
+    33.33% {
+        background-image: url('gambar/ruang keluarga.jpg');
+    }
+    66.67% {
+        background-image: url('gambar/ruang makan 2.jpg');
+    }
+    100% {
+        background-image: url('gambar/ruang utama.jpg');
+    }
+}
+
+/* class navbar */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(175, 175, 0);
+    padding: 5px 50px;
+    z-index: 1000;
+}
+
+.navbar .btn {
+    color: var(--black);
+    border: 3px solid;
+    animation: animateSpin 2s linear infinite;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn:hover {
+    animation: none;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+@keyframes animateSpin {
+    20% {
+        border-color: #ffdb3b;
+    }
+
+    45% {
+        border-color: #fe53bb;
+    }
+
+    67% {
+        border-color: #8f51ea;
+    }
+
+    77% {
+        border-color: #0010f3;
+    }
+}
+
+/* class container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+}
+
+/* class form */
+.container .form {
+    position: absolute;
+    top: 15%;
+    min-width: 400px;
+    min-height: 450px;
+    background: beige;
+    /* backdrop-filter: blur(20px); */
+    border-radius: 10px;
+    opacity: 1;
+    visibility: hidden;
+}
+
+/* waktu active */
+.container .form.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* tag form */
+.container .form form {
+    row-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+}
+
+/* tag h1 */
+.container .login h1,
+.container .signup h1 {
+    color: var(--black);
+    text-align: center;
+    font-size: 2rem;
+    font-family: "DM Serif Display", serif;
+    cursor: default;
+}
+
+/* class form-control */
+.container .form form .row .col .form-control {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 138px;
+}
+
+/* class form-control, form-select */
+.container .login .form-control,
+.container .signup .form-control,
+.container .signup .form-select {
+    background-color: var(--white);
+    box-shadow: inset 5px 5px 12px #6e6e6e, 3px 3px 12px #2c2c2c, -3px -3px 12px #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 300px;
+    height: 60px;
+    position: relative;
+    top: 0;
+}
+
+/* class opsi */
+.container .login .opsi,
+.container .signup .opsi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    color: #212121;
+}
+
+/* tag a */
+.container .login .opsi a,
+.container .signup .opsi a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1rem;
+    background-color: var(--white);
+    box-shadow: inset -2px -2px 4px #000000, 2px 2px 4px #2c2c2c, -3px -3px 12px #ffffff;
+    border-radius: 5px 10px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.container .login .opsi a:hover,
+.container .signup .opsi a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.container .login .opsi a:active,
+.container .signup .opsi a:active {
+    transform: scale(0.9);
+}
+
+/* class btn */
+.container .login .btn,
+.container .signup .btn {
+    width: 20%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: var(--white);
+    box-shadow: inset -2px -2px 4px #000000, 2px 2px 4px #2c2c2c, -3px -3px 12px #ffffff;
+    color: var(--black);
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: -27%;
+    transition: all 0.3s ease;
+}
+
+.container .login .btn:hover,
+.container .signup .btn:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.container .login .btn:active,
+.container .signup .btn:active {
+    transform: scale(0.9);
+}
+
+/* class icon */
+.container .login .icon {
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class fa-google, fa-github, fa-linkedin */
+.container .login .icon .fa-google,
+.container .login .icon .fa-github,
+.container .login .icon .fa-linkedin {
+    padding: 10px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    background-color: var(--white);
+    box-shadow: inset -2px -2px 4px #242424, 2px 2px 4px #2c2c2c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .login .icon .fa-google:hover,
+.container .login .icon .fa-github:hover,
+.container .login .icon .fa-linkedin:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.container .login .icon .fa-google:active,
+.container .login .icon .fa-github:active,
+.container .login .icon .fa-linkedin:active {
+    transform: scale(0.9);
+}
+
+/* tag input type checkbox form login */
+.container .login .opsi input[type="checkbox"] {
+    accent-color: yellow;
+    margin-right: 5px;
+}
+
+/* tag label form signup */
+.container .signup .row .col label {
+    font-size: 1rem;
+    color: var(--black);
+    margin-left: 10px;
+}
+
+/* class opsi form signup */
+.container .signup .opsi {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+}
