@@ -1,0 +1,1124 @@
+:root {
+    --white: #e6e6e6;
+    --black: #151515;
+    --blue: #0000ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    /* border: 1px dotted black; */
+}
+
+/* class navbar */
+.navbar {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: var(--white);
+    mix-blend-mode: difference;
+}
+
+.navbar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin: 0;
+    cursor: default;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: var(--white);
+    /* optional */
+    font-size: 1rem;
+}
+
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: var(--white);
+    /* optional */
+}
+
+.navbar .nav-link:focus {
+    color: var(--white);
+}
+
+.navbar .fa-instagram,
+.navbar .fa-linkedin-in {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+/* class .fa-bars */
+.navbar .fa-bars {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+/* class btn */
+.navbar .btn {
+    transition: all 0.3s ease;
+}
+
+.navbar .btn:hover {
+    transform: scale(1.1);
+    color: var(--white);
+    background-color: transparent;
+    /* border: 1px solid var(--white); */
+    box-shadow: none;
+}
+
+.navbar .btn:active {
+    transform: scale(0.9);
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    background-color: transparent;
+    color: var(--black);
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+
+/* halaman header */
+header {
+    width: 100%;
+    height: 100vh;
+    background: url('gambar/header.jpg') no-repeat center center/cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 0;
+}
+
+/* class container */
+header .container {
+    width: 90%;
+    height: 100%;
+}
+
+/* class content */
+header .container .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* class left */
+header .container .content .left {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* tag h2 */
+header .container .content .left h2 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+/* tag p */
+header .container .content .left p {
+    font-size: 1.2rem;
+    color: var(--white);
+    cursor: default;
+}
+
+/* class btn */
+header .container .content .left .btn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0 20px;
+    width: 170px;
+    height: 60px;
+    line-height: 15px;
+    background-color: var(--blue);
+    border: none;
+    box-shadow: 5px 5px 10px var(--black);
+    transition: all 0.3s ease;
+}
+
+header .container .content .left .btn:hover {
+    transform: scale(1.1);
+    background: var(--var(--white));
+    box-shadow: none;
+}
+
+header .container .content .left .fa-arrow-down {
+    position: relative;
+    top: 20px;
+    left: 2%;
+    color: var(--white);
+    font-size: 2.5rem;
+    filter : drop-shadow(5px 5px 10px var(--black));
+    transition: all 0.3s ease;
+}
+
+header .container .content .left .fa-arrow-down:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+
+/* class right */
+header .container .content .right {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tag img */
+/* header .container .content .right img {
+    width: 280px;
+    height: 220px;
+    object-fit: cover;
+} */
+
+
+/* halaman about us */
+#aboutUs {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(28, 28, 28);
+}
+
+/* class container */
+#aboutUs .container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class content */
+#aboutUs .container .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class left */
+#aboutUs .container .content .left {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: -20%;
+    row-gap: 10px;
+}
+
+/* tag h2, left */
+#aboutUs .container .content .left h2 {
+    font-size: 1rem;
+    color: var(--white);
+    text-transform: uppercase;
+    cursor: default;
+}
+
+/* tag span, left */
+#aboutUs .container .content .left span {
+    font-size: 2.5rem;
+    width: 300px;
+    line-height: 40px;
+    color: var(--white);
+    text-transform: uppercase;
+    cursor: default;
+}
+
+/* tag a, left */
+#aboutUs .container .content .left a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    flex-direction: row-reverse;
+}
+
+/* class fa-arrow-down */
+#aboutUs .container .content .left .fa-arrow-down {
+    position: relative;
+    top: 20px;
+    left: 2%;
+    color: var(--white);
+    font-size: 2.5rem;
+    filter : drop-shadow(5px 5px 10px var(--black));
+    transition: all 0.3s ease;
+}
+
+#aboutUs .container .content .left .fa-arrow-down:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+
+/* class right */
+#aboutUs .container .content .right {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* class top, right */
+#aboutUs .container .content .right .top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    position: relative;
+    top: 20px;
+}
+
+/* tag h3, right, top */
+#aboutUs .container .content .right .top h3 {
+    width: 50%;
+    font-size: 1.2rem;
+    line-height: 25px;
+    color: var(--white);
+    cursor: default;
+}
+
+/* tag span, right, top */
+#aboutUs .container .content .right .top span {
+    width: 50%;
+    font-size: 1rem;
+    color: var(--white);
+    cursor: default;
+}
+
+/* class bottom, right, bottom */
+#aboutUs .container .content .right .bottom {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: 20px;
+}
+
+/* tag img, right, bottom */
+#aboutUs .container .content .right .bottom img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+/* halaman business segments */
+#business {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+/* class container */
+#business .container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class content */
+#business .container .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* class top */
+#business .container .content .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    top: 10%;
+    row-gap: 10px;
+}
+
+/* tag h2, top */
+#business .container .content .top .title h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--black);
+    cursor: default;
+}
+
+/* class desc, top */
+#business .container .content .top .desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* tag a, top */
+#business .container .content .top .desc a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    flex-direction: row-reverse;
+}
+
+/* tag h2, top */
+#business .container .content .top .desc h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    cursor: default;
+}
+
+/* class fa-arrow-down */
+#business .container .content .top .fa-arrow-down {
+    position: absolute;
+    top: 100%;
+    left: 1%;
+    z-index: 5;
+    color: var(--black);
+    font-size: 2.5rem;
+    filter : drop-shadow(5px 5px 10px var(--black));
+    transition: all 0.3s ease;
+}
+
+#business .container .content .top .fa-arrow-down:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+
+/* class bottom */
+#business .container .content .bottom {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 10%;
+}
+
+/* class grid, bottom */
+#business .container .content .bottom .grid {
+    /* max-width: 70%; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  */
+    gap: 20px;
+}
+
+/* class card, bottom */
+#business .container .content .bottom .card {
+    width: 200px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    border-radius: 5px 5px 5px 50px;
+}
+
+/* class image, bottom */
+#business .container .content .bottom .card .image {
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+/* tag img, bottom */
+#business .container .content .bottom .card .image img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+/* class card-body, bottom */
+#business .container .content .bottom .card .card-body {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tag h2, bottom */
+#business .container .content .bottom .card .card-body h2 {
+    font-size: 1rem;
+    cursor: default;
+    position: relative;
+    left: 15%;
+}
+
+
+/* halaman manajement */
+#manajement {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue);
+}
+
+/* class container */
+#manajement .container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* class title */
+#manajement .container .title {
+    width: 100%;
+    position: relative;
+    top: 10%;
+}
+
+/* tag h2 */
+#manajement .container .title h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--white);
+    cursor: default;
+}
+
+/* class head */
+#manajement .container .head {
+    width: 100%;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* tag h2 */
+#manajement .container .head h2 {
+    width: 200px;
+    font-size: 1.5rem;
+    color: var(--white);
+    text-transform: uppercase;
+    cursor: default;
+}
+
+/* class arrow */
+#manajement .container .head .arrow {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    font-size: 1.2rem;
+}
+
+#manajement .container .head .arrow .fa-chevron-left,
+#manajement .container .head .arrow .fa-chevron-right {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#manajement .container .head .arrow .fa-chevron-left:hover,
+#manajement .container .head .arrow .fa-chevron-right:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* class fa-arrow-down */
+#manajement .container .head .fa-arrow-down {
+    position: absolute;
+    top: 100%;
+    left: 1%;
+    z-index: 10;
+    color: var(--white);
+    font-size: 2.5rem;
+    filter : drop-shadow(5px 5px 10px var(--black));
+    transition: all 0.3s ease;
+}
+
+#manajement .container .head .fa-arrow-down:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+
+/* class slider */
+#manajement .container .slider {
+    position: relative;
+    top: 10%;
+    width: 90%;
+    height: 70%;
+    display: flex;
+    overflow-x: scroll;
+}
+
+/* class card */
+#manajement .container .slider .card {
+    width: 230px;
+    height: 360px;
+    flex: 0 0 auto; /* tumbuh dengan ukuran sesuai width */
+    margin: 0 10px;
+    background-color: darkblue;
+    border-radius: 10px;
+}
+
+/* class image */
+#manajement .container .slider .card .image {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tag img */
+#manajement .container .slider .card .image img {
+    width: 95%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 5px 5px 5px 50px;
+}
+
+/* class card-body */
+#manajement .container .slider .card .card-body {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+}
+
+/* tag h2 */
+#manajement .container .slider .card .card-body h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    cursor: default;
+}
+
+/* tag span */
+#manajement .container .slider .card .card-body span {
+    font-size: 0.8rem;
+    cursor: default;
+}
+
+/* tag p */
+#manajement .container .slider .card .card-body p {
+    font-size: 0.8rem;
+    margin: 10px 0 0 0;
+}
+
+
+/* halaman latest news */
+#news {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+/* class container */
+#news .container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* class title */
+#news .container .title {
+    width: 100%;
+    position: relative;
+    top: 12%;
+}
+
+/* tag h2 */
+#news .container .title h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--black);
+    cursor: default;
+}
+
+/* class head */
+#news .container .head {
+    width: 100%;
+    position: relative;
+    top: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* tag h2 */
+#news .container .head h2 {
+    width: 200px;
+    font-size: 1.5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    cursor: default;
+}
+
+#news .container .head a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+/* class fa-arrow-down */
+#news .container .head .fa-angles-up {
+    position: absolute;
+    top: 100%;
+    left: 1%;
+    z-index: 10;
+    color: var(--black);
+    font-size: 2.5rem;
+    filter : drop-shadow(5px 5px 10px var(--black));
+    transition: all 0.3s ease;
+}
+
+#news .container .head .fa-angles-up:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+
+#news .container .slider {
+    width: 90%;
+    min-height: 70%;
+    position: relative;
+    top: 15%;
+    display: flex;
+    overflow-x: scroll;
+}
+
+#news .container .slider .card {
+    width: 320px;
+    height: 330px;
+    flex: 0 0 auto;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+
+#news .container .slider .card .image {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#news .container .slider .card .image img {
+    width: 95%;
+    height: 95%;
+    border-radius: 5px 5px 5px 50px;
+    object-fit: cover;
+}
+
+#news .container .slider .card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#news .container .slider .card .card-body h3 {
+    font-size: 1.2rem;
+    color: var(--black);
+    font-weight: 500;
+    margin: 0;
+    cursor: default;
+}
+
+#news .container .slider .card .card-body p {
+    font-size: 0.8rem;
+    color: var(--black);
+    margin: 0;
+    cursor: default;
+}
+
+#news .container .slider .card .card-body .desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#news .container .slider .card .card-body .desc h4 {
+    font-size: 0.8rem;
+    color: var(--black);
+    margin: 0;
+    cursor: default;
+}
+
+#news .container .slider .card .card-body .desc h5 {
+    font-size: 2rem;
+    color: var(--black);
+    margin: 0;
+    cursor: default;
+}
+
+/* halaman footer */
+footer {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class cipta */
+footer .cipta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 0;
+}
+
+/* tag h5 */
+footer .cipta h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--black);
+    cursor: default;
+}
+
+/* tag img */
+footer .cipta img {
+    position: relative;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/* class contact */
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: var(--black);
+}
+
+/* tag h2 */
+footer .contact h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: default;
+}
+
+/* tag span */
+footer .contact span {
+    margin: 0;
+    font-size: 0.8rem;
+    cursor: default;
+}
+
+/* tag i */
+footer .contact i {
+    font-size: 1.2rem;
+    margin-right: 3px;
+}
+
+/* class sosial */
+footer .sosial {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: var(--black);
+}
+
+/* tag h2 */
+footer .sosial h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: default;
+}
+
+/* tag span */
+footer .sosial span {
+    margin: 0;
+    font-size: 0.8rem;
+    cursor: default;
+}
+
+/* tag i */
+footer .sosial i {
+    font-size: 1.2rem;
+    margin-right: 3px;
+}
+
+/* media query mobile */
+@media screen and (max-width: 767px) {
+
+    #aboutUs {
+        height: 110vh;
+    }
+
+    #aboutUs .container .content {
+        height: 70vh;
+        position: relative;
+        top: 0;
+    }
+
+    #aboutUs .container .content .left,
+    #aboutUs .container .content .right {
+        width: 100%;
+        position: relative;
+        top: -20%;
+    }
+
+    #aboutUs .container .content .left h2,
+    #business .container .content .top .title h2,
+    #manajement .container .title h2,
+    #news .container .title h2 {
+        font-size: 0.8rem;
+    }
+
+    #aboutUs .container .content .left span {
+        font-size: 1.5rem;
+        width: 180px;
+    }
+
+    #aboutUs .container .content .right .top h3 {
+        font-size: 1rem;
+    }
+
+    #aboutUs .container .content .right .top span {
+        font-size: 0.8rem;
+    }
+
+    #aboutUs .container .content .right .bottom img {
+        height: 250px;
+    }
+
+    #business .container .content .top h2,
+    #manajement .container .head h2,
+    #news .container .head h2 {
+        font-size: 1.3rem;
+    }
+
+    #business .container .content .bottom .grid {
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        top: 0;
+    }
+
+    #business .container .content .bottom .grid .card {
+        width: 150px;
+        height: 150px;
+    }
+
+    #business .container .content .bottom .card .image img {
+        height: 100px;
+    }
+
+    #manajement .container .slider,
+    #news .container .slider {
+        position: relative;
+        top: 20%;
+        height: 55vh;
+        width: 110%;
+    }
+
+    #manajement .container .slider .card {
+        width: 180px;
+        height: 360px;
+    }
+
+    #manajement .container .slider .card .image img {
+        height: 190px;
+    }
+
+    #manajement .container .slider .card .card-body p {
+        margin: 0;
+    }
+
+    #news .container .slider .card {
+        width: 200px;
+    }
+
+    #news .container .slider .card .card-body h3 {
+        font-size: 1rem;
+    }
+
+    #news .container .slider .card .card-body .desc h5 {
+        font-size: 1rem;
+    }
+
+    header .container .content .left .fa-arrow-down {
+        position: absolute;
+        top: 80%;
+        left: 80.5%;
+        z-index: 5;
+    }
+
+    #aboutUs .container .content .left .fa-arrow-down {
+        position: absolute;
+        top: 230%;
+        left: 86.5%;
+        z-index: 5;
+    }
+
+    #business .container .content .top .fa-arrow-down {
+        position: absolute;
+        top: 820%;
+        left: 86.5%;
+        z-index: 5;
+    }
+
+    #manajement .container .head .fa-arrow-down {
+        position: absolute;
+        top: 1300%;
+        left: 86.5%;
+        z-index: 5;
+    }
+
+    #news .container .head .fa-angles-up {
+        position: absolute;
+        top: 1400%;
+        left: 86.5%;
+        z-index: 5;
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    footer .cipta {
+        width: 35%;
+    }
+
+    footer .cipta img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .cipta h5 {
+        font-size: 0.6rem;
+    }
+
+    footer .contact i,
+    footer .sosial i {
+        font-size: 1rem;
+    }
+
+    footer .contact,
+    footer .sosial {
+        gap: 0;
+        margin: 0;
+        width: 35%;
+    }
+
+    footer span {
+        font-size: 0.6rem;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+
+    #business .container .content .bottom .grid {
+        position: relative;
+        top: 20%;
+    }
+
+    #manajement .container .slider,
+    #news .container .slider {
+        position: relative;
+        top: 30%;
+        height: 55vh;
+        width: 110%;
+    }
+
+    header .container .content .left .fa-arrow-down {
+        position: absolute;
+        top: 90%;
+        left: 81.5%;
+        z-index: 5;
+    }
+
+    #aboutUs .container .content .left .fa-arrow-down {
+        position: absolute;
+        top: 500%;
+        left: 176.5%;
+        z-index: 5;
+    }
+
+    #business .container .content .top .fa-arrow-down {
+        position: absolute;
+        top: 1020%;
+        left: 86.5%;
+        z-index: 5;
+    }
+
+    #manajement .container .head .fa-arrow-down {
+        position: absolute;
+        top: 1300%;
+        left: 86.5%;
+        z-index: 5;
+    }
+
+    #news .container .head .fa-angles-up {
+        position: absolute;
+        top: 2000%;
+        left: 86.5%;
+        z-index: 5;
+    }
+}
