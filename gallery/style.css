@@ -38,6 +38,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
     gap: 5px;
 }
 
@@ -49,6 +50,7 @@ body {
     width: 200px;
     height: 200px;
     object-fit: cover;
+    border-radius: 7px;
     z-index: 0;
     transition: all 0.3s;
 }
