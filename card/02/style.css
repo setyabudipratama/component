@@ -60,11 +60,11 @@ body {
 }
 
 #card .container .card:hover img {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     box-shadow: none;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 #card .container .card .card-body {
