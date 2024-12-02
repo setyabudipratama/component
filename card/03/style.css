@@ -39,7 +39,7 @@ body {
     width: 300px;
     height: 300px;
     flex: 0 0 auto;
-    margin: 0 20px;
+    margin: 0 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,11 +54,11 @@ body {
     z-index: 1;
     border-radius: 10px;
     transition: all 0.5s ease;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 10px 10px 10px black;
 }
 
 #card .container .card:hover img {
-    transform: translate(-20px, -20px);
+    transform: scale(1.1);
     box-shadow: none;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 #card .container .card:hover .card-body {
-    transform: translate(20px, 20px);
+    transform: translate(50px, 50px);
 }
 
 #card .container .card:first-child .card-body {
