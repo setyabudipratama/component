@@ -64,7 +64,7 @@ body {
     height: 230px;
     border-radius: 50%;
     box-shadow: none;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 #card .container .card .card-body {
@@ -83,7 +83,8 @@ body {
 }
 
 #card .container .card:hover .card-body {
-    height: 70%;
+    height: 50%;
+    border-radius: 100px 100px 0 0;
 }
 
 #card .container .card .card-body h2 {
