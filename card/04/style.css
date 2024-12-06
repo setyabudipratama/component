@@ -112,36 +112,6 @@ body {
     box-shadow: 0 0 50px blue;
 }
 
-/* #card .container .card:hover .card-body {
-    opacity: 1;
-    width: 90%;
-    height: 92%;
-    border-radius: 12px;
-    animation: shadow 4s linear infinite;
-}
-
-@keyframes shadow {
-    0% {
-        box-shadow: 0 0 50px yellow;
-    }
-
-    25% {
-        box-shadow: 0 0 50px red;
-    }
-
-    50% {
-        box-shadow: 0 0 50px grey;
-    }
-
-    75% {
-        box-shadow: 0 0 50px blue;
-    }
-
-    100% {
-        box-shadow: 0 0 50px yellow;
-    }
-} */
-
 #card .container .card .card-body h2 {
     position: absolute;
     bottom: 40%;
@@ -152,10 +122,6 @@ body {
     opacity: 0;
 }
 
-#card .container .card:hover .card-body h2 {
-    opacity: 1;
-}
-
 #card .container .card .card-body p {
     position: absolute;
     bottom: 34%;
@@ -164,10 +130,6 @@ body {
     cursor: default;
     transition: all 0.5s ease 0.7s;
     opacity: 0;
-}
-
-#card .container .card:hover .card-body p {
-    opacity: 1;
 }
 
 #card .container .card .card-body .social {
@@ -186,6 +148,8 @@ body {
     opacity: 0;
 }
 
+#card .container .card:hover .card-body h2,
+#card .container .card:hover .card-body p,
 #card .container .card:hover .card-body .social {
     opacity: 1;
 }
