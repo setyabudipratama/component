@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted black; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#card {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, yellow, black);
+}
+
+#card h1 {
+    text-transform: uppercase;
+    cursor: default;
+    position: relative;
+    top: 5%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+#card .container {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card .container .card {
+    min-width: 150px;
+    height: 350px;
+    border-radius: 50px;
+    margin: 0 5px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 150px;
+    filter: brightness(0.5);
+}
+
+#card .container .card:hover {
+    flex-grow: 2;
+    filter: brightness(1);
+    border-radius: 20px;
+}
+
+#card .container .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#card .container .card .card-body {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#card .container .card .card-body h2 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    position: absolute;
+    top: 60%;
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.5s ease;
+    opacity: 0;
+    width: 0; /* width untuk text */
+}
+
+#card .container .card:hover .card-body h2 {
+    opacity: 1;
+    width: 11ch; /* width 'ch' untuk text */
+    animation: typing 0.8s steps(11, end) forwards; /* foward hanya berulang 1 kali / awal */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 11ch;
+    }
+}
+
+#card .container .card .card-body p {
+    font-size: 0.8rem;
+    color: #ffffff;
+    position: absolute;
+    top: 70%;
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.5s ease 0.8s;
+    opacity: 0;
+    width: 0;
+}
+
+#card .container .card:hover .card-body p {
+    opacity: 1;
+    width: 10ch;
+    animation: typing2 0.8s steps(10, end) 0.8s forwards;
+}
+
+@keyframes typing2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10ch;
+    }
+}
