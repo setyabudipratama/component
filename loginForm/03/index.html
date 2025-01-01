@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="w-full flex h-screen justify-center items-center bg-no-repeat bg-center bg-cover"
+        style="background-image: url('property.jpg')">
+        <div class="container w-full h-screen">
+            <div class="absolute top-0 w-full h-full flex justify-center items-center block" id="login">
+                <form class="w-full h-full flex justify-center items-center" action="" method="">
+                    <!-- 
+                    md digunakan untuk responsive 768px ukuran default ditaruh dibelakang property md:
+                    w-11/12 (layar 768px), w-2/5 (layar default)-->
+                    <div
+                        class="border-2 border-white backdrop-blur-xl p-5 w-11/12 md:w-2/5 h-5/5 flex flex-col space-y-10 justify-center items-center">
+                        <h2 class="font-serif font-medium text-3xl md:text-4xl text-white cursor-default">Login</h2>
+                        <div class="w-9/12 h-18 flex flex-col font-medium text-white text-lg cursor-default">
+                            <label for="username">Username</label>
+                            <input class="bg-transparent border-b-2 border-white h-10 focus:outline-none" type="text"
+                                name="username" id="username">
+                        </div>
+                        <div class="w-9/12 h-18 flex flex-col font-medium text-white text-lg cursor-default">
+                            <label for="password">Password</label>
+                            <input class="bg-transparent border-b-2 border-white h-10 focus:outline-none"
+                                type="password" name="password" id="password">
+                        </div>
+                        <div class="w-9/12 h-10 flex flex-row justify-between px-3 text-white text-lg cursor-default">
+                            <span class="hover:text-blue-500 transition duration-300">Lupa Password</span>
+                            <span class="hover:text-blue-500 transition duration-300" id="btnRegister">Register</span>
+                        </div>
+                        <div
+                            class="w-24 h-10 bg-transparent flex justify-center items-center border-2 border-white rounded-md font-bold text-lg text-white bg-transparent hover:bg-white hover:text-black transition duration-300 transform hover:-translate-y-2 active:scale-90">
+                            <button id="btn-login">Login</button>
+                        </div>
+                        <div class="relative w-full h-10 flex justify-evenly items-center text-2xl">
+                            <i
+                                class="fa-brands fa-google text-black bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-lg transition duration-300 transform hover:scale-110"></i>
+                            <i
+                                class="fa-brands fa-github text-black bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-lg transition duration-300 transform hover:scale-110"></i>
+                            <i
+                                class="fa-brands fa-linkedin text-black bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-lg transition duration-300 transform hover:scale-110"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="absolute top-0 w-full h-full flex justify-center items-center hidden" id="register">
+                <form class="w-full h-4/5 flex justify-center items-center" action="" method="">
+                    <!-- 
+                    md digunakan untuk responsive 768px ukuran default ditaruh dibelakang property md:
+                    w-11/12 (layar 768px), w-2/5 (layar default)-->
+                    <div
+                        class="border-2 border-white backdrop-blur-xl p-0 w-11/12 md:w-2/5 h-5/5 flex flex-col p-5 space-y-6 justify-center items-center">
+                        <h2 class="font-serif font-medium text-3xl md:text-4xl text-white cursor-default">Register</h2>
+                        <div class="w-9/12 h-20 flex flex-col font-medium text-white text-lg cursor-default">
+                            <label for="username">Username</label>
+                            <input class="bg-transparent border-b-2 border-white h-8 focus:outline-none" type="text"
+                                name="username" id="username2">
+                        </div>
+                        <div class="w-9/12 h-20 flex flex-col font-medium text-white text-lg cursor-default">
+                            <label for="password">Password</label>
+                            <input class="bg-transparent border-b-2 border-white h-8 focus:outline-none" type="password"
+                                name="password" id="password2">
+                        </div>
+                        <div class="w-9/12 h-20 flex flex-col font-medium text-white text-lg cursor-default">
+                            <label for="password2">Confirm Password</label>
+                            <input class="bg-transparent border-b-2 border-white h-8 focus:outline-none" type="password"
+                                name="password" id="password3">
+                        </div>
+                        <div class="w-9/12 h-8 flex flex-row justify-end px-3 text-white text-lg cursor-default">
+                            <span class="hover:text-blue-500 transition duration-300" id="btnLogin">Login</span>
+                        </div>
+                        <div class="w-24 h-10 bg-transparent flex justify-center items-center border-2 border-white rounded-md font-bold text-lg cursor-pointer text-white mt-0 hover:bg-white hover:text-black transition duration-300 transform hover:-translate-y-2 active:scale-90"
+                            <button id="btn-signup">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
