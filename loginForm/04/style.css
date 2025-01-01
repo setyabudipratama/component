@@ -1,0 +1,335 @@
+:root {
+    --white: #e6e6e6;
+    --black: #151515;
+    --blue: #0000ff;
+    --yellow: #ffff00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted black; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#vanta-bg {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: var(--yellow);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class content */
+.container .login,
+.container .register {
+    width: 40%;
+    height: 80vh;
+    padding: 10px 0;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 5px 5px 10px var(--white);
+    display: none;
+    transition: all 0.3s;
+}
+
+.container .login.active,
+.container .register.active {
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+/* tag h2 */
+.container .login h2,
+.container .register h2 {
+    color: var(--white);
+    cursor: default;
+    margin-bottom: 1rem;
+}
+
+/* class form */
+.container .login form,
+.container .register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    min-height: 50%;
+    row-gap: 20px;
+    position: relative;
+}
+
+/* tag lable */
+.container .login form label,
+.container .register form label {
+    color: var(--white);
+    text-transform: capitalize;
+    position: absolute;
+    z-index: -1;
+}
+
+/* tag label username */
+.container .login form label:first-child {
+    top: 4%;
+    left: 5%;
+    transition: all 0.5s ease-in-out;
+}
+.container .login form label:first-child.active {
+    transform: translateY(-25px);
+    background-color: var(--blue);
+    z-index: 1;
+}
+
+/* tag label username register */
+.container .register form label:first-child {
+    top: 5%;
+    left: 5%;
+    transition: all 0.5s ease-in-out;
+}
+.container .register form label:first-child.active {
+    transform: translateY(-25px);
+    background-color: var(--blue);
+    z-index: 1;
+}
+
+/* tag label password */
+.container .login form label:nth-child(3) {
+    top: 22%;
+    left: 5%;
+    transition: all 0.5s ease-in-out;
+}
+.container .login form label:nth-child(3).active {
+    transform: translateY(-25px);
+    background-color: var(--blue);
+    z-index: 1;
+}
+
+.container .register form label:nth-child(3) {
+    top: 28%;
+    left: 5%;
+    transition: all 0.5s ease-in-out;
+}
+.container .register form label:nth-child(3).active {
+    transform: translateY(-25px);
+    background-color: var(--blue);
+    z-index: 1;
+}
+
+.container .register form label:nth-child(5) {
+    top: 52%;
+    left: 5%;
+    transition: all 0.5s ease-in-out;
+}
+.container .register form label:nth-child(5).active {
+    transform: translateY(-25px);
+    background-color: var(--blue);
+    z-index: 1;
+}
+
+/* tag input */
+.container .login form input,
+.container .register form input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    color: var(--white);
+    padding: 0 10px;
+    font-size: 1rem;
+    outline: none;
+    cursor: text;
+}
+
+/* class menu */
+.container .login form .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+}
+
+/* class remember */
+.container .login form .menu .remember {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+/* tag input */
+.container .login form .menu .remember input {
+    accent-color: var(--yellow);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* tag a */
+.container .login form .menu a {
+    font-size: 1rem;
+    color: var(--white);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* tag button */
+.container .login form button,
+.container .register form button {
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: none;
+    background: var(--blue);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* tag span */
+.container .login form button span,
+.container .register form button span {
+    position: absolute;
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--yellow);
+    border-radius: 50px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s ease;
+}
+
+.container .login form button:hover span,
+.container .register form button:hover span {
+    width: 100%;
+}
+
+/* class fa-arrow-right */
+.container .login form button .fa-arrow-right,
+.container .register form button .fa-arrow-right {
+    font-size: 1.5rem;
+    color: var(--black);
+    display: none;
+}
+
+.container .login form button:hover .fa-arrow-right,
+.container .register form button:hover .fa-arrow-right {
+    display: block;
+}
+
+/* class social */
+.container .login form .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    row-gap: 10px;
+}
+
+/* class fa-google, fa-github */
+.container .login form .social .fa-google,
+.container .login form .social .fa-github {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    background-color: var(--blue);
+    position: relative;
+}
+
+.container .login form .social .fa-google span,
+.container .login form .social .fa-github span {
+    position: absolute;
+    background-color: var(--yellow);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s ease;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+}
+
+.container .login form .social .fa-google:hover span,
+.container .login form .social .fa-github:hover span {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    color: var(--black);
+}
+
+/* tag a */
+.container .login form a,
+.container .register form a {
+    font-size: 1rem;
+    color: var(--white);
+    text-decoration: underline;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .container .login,
+    .container .register {
+        width: 80%;
+    }
+
+    .container .login form,
+    .container .register form {
+        width: 80%;
+    }
+
+    .container .login form label:first-child {
+        top: 4%;
+        font-size: 0.9rem;
+    }
+    
+    .container .login form label:nth-child(3) {
+        top: 21%;
+        font-size: 0.9rem;
+    }
+
+    .container .login form .menu a,
+    .container .login form a {
+        font-size: 0.9rem;
+    }
+}
