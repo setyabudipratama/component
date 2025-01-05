@@ -201,7 +201,7 @@ footer .container .contact button span {
     width: 0;
     height: 100%;
     background-color: yellow;
-    transition: all 0.3s ease;
+    transition: width 0.5s ease;
 }
 
 footer .container .contact button:hover span {
