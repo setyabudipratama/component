@@ -1,2 +1,2 @@
 # navbar
-![navbar](https://github.com/setyabudipratama/gambar/navbar)
+![navbar](https://raw.githubusercontent.com/setyabudipratama/component/main/gambar/navbar.png)
