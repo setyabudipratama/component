@@ -118,7 +118,6 @@ header .container .button2 button {
 }
 
 header .container .button2 span {
-    content: '';
     width: 100%;
     height: 50%;
     position: absolute;
