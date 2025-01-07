@@ -125,7 +125,6 @@ header .container .button2 span {
     left: 0;
     background-color: yellow;
     box-shadow: 0 0 5px yellow;
-    border: none;
     z-index: 0;
     animation: rotate 2s linear infinite;
     animation-play-state: running;
