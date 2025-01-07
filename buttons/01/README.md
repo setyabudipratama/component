@@ -1,2 +1,2 @@
 # button
-![button](../gambar/button.png)
+![button](https://raw.githubusercontent.com/setyabudipratama/component/main/gambar/button.png)
