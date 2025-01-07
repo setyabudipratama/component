@@ -1,2 +1,2 @@
 # button
-(./component/gambar/button.png)
+![button](./component/gambar/button.png)
