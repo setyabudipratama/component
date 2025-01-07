@@ -1,2 +1,2 @@
 # button
-![button](./gambar/button.png)
+![button](../gambar/button.png)
