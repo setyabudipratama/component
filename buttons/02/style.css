@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url('gambar/Ejen\ Alicia\ Season\ 2.jpg') no-repeat center center fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* button 1 */
+header .container .button {
+    width: 150px;
+    height: 50px;
+    position: relative;
+}
+
+header .container .button button {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    color: white;
+    border: 2px solid yellow;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    transform-origin: top;
+    transform: perspective(800px) rotateX(30deg);
+    transition: all 0.5s ease;
+}
+
+header .container .button span {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    width: 96%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s ease;
+}
+header .container .button span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+}
+header .container .button:hover button {
+    transform: perspective(800px) rotateX(30deg) translateY(-25px);
+}
+header .container .button:hover span {
+    border-bottom: 3px solid yellow;
+    transform-origin: top;
+    transform: perspective(800px) rotateX(30deg) translateY(-15px);
+}
+header .container .button:hover span::before {
+    border-bottom: 3px solid yellow;
+    transform-origin: top;
+    transform: perspective(800px) rotateX(30deg);
+}
+
+/* button 2 */
+header .container .button2 {
+    width: 150px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .button2 button {
+    width: 94%;
+    height: 85%;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    animation: spin 2s linear infinite;
+    border: none;
+    z-index: 1;
+    transition: all 1s ease;
+}
+
+header .container .button2 span {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    background-color: yellow;
+    box-shadow: 0 0 5px yellow;
+    border: none;
+    z-index: 0;
+    animation: rotate 2s linear infinite;
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header .container .button2:hover span {
+    animation-play-state: paused;
+}
+
+/* button 3 */
+header .container .button3 {
+    width: 140px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+header .container .button3 button {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+}
+
+header .container .button3 span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: yellow;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.5s ease;
+}
+header .container .button3:hover span {
+    height: 100%;
+}
+
+header .container .button3 span .fa-download {
+    font-size: 1.5rem;
+    color: black;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+header .container .button3:hover span .fa-download {
+    opacity: 1;
+}
