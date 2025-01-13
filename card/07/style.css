@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted black; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#card {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#card .container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card .container .card {
+    width: 230px;
+    height: 230px;
+    background: linear-gradient(135deg, yellow, grey);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px 5px grey, 
+    0 0 10px 10px yellow;
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.375);
+}
+
+#card .container .card:hover {
+    width: 420px;
+    height: 320px;
+    align-items: center;
+    box-shadow: none;
+}
+
+#card .container .card img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.375);
+}
+
+#card .container .card:hover img {
+    transform: translateX(-40%);
+}
+
+#card .container .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2px;
+}
+
+#card .container .card .card-body h2,
+#card .container .card .card-body p {
+    cursor: default;
+    margin: 0;
+    text-transform: capitalize;
+    opacity: 0;
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.375);
+}
+#card .container .card:hover .card-body h2,
+#card .container .card:hover .card-body p {
+    opacity: 1;
+}
+
+#card .container .card .card-body h2 {
+    margin: 0 0 5px 0;
+    font-family: pacifico;
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 767px) {
+    #card .container .card {
+        flex-direction: column;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    
+    #card .container .card:hover {
+        width: 250px;
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    #card .container .card img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    #card .container .card:hover img {
+        transform: translateY(-50%);
+    }
+
+    #card .container .card .card-body {
+        position: relative;
+        top: -50px;
+    }
+
+    #card .container .card .card-body h2 {
+        font-size: 1rem;
+    }
+
+    #card .container .card .card-body p {
+        font-size: 0.8rem;
+    }
+}
