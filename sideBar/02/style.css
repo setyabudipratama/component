@@ -179,6 +179,7 @@ header .sidebar ul li:last-child a .menu {
     position: absolute;
     left: 55px;
     opacity: 0;
+    text-transform: capitalize;
     transition: opacity 0.4s ease;
 }
 header .sidebar.active ul li:last-child a .menu {
