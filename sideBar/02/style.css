@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted white; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url('gambar/Ejen\ Alicia\ Season\ 2.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+}
+
+header .sidebar {
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    z-index: 1000;
+    background: linear-gradient(135deg, rgb(214, 214, 0), rgb(0, 0, 0));
+    width: 100px;
+    height: 95vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.7s ease;
+}
+header .sidebar.active {
+    width: 180px;
+}
+
+header .sidebar .fa-chevron-right {
+    color: white;
+    background-color: black;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 80%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+header .sidebar .fa-chevron-right,
+.fa-chevron-left {
+    transition: transform 0.7s ease;
+}
+header .sidebar.active .fa-chevron-right {
+    transform: rotate(180deg);
+    left: 90%;
+}
+
+header .sidebar .profile {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .sidebar .profile img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 5%;
+    left: 2.5%;
+    z-index: 5;
+}
+
+header .sidebar .profile span {
+    opacity: 0;
+    color: white;
+    font-size: 1rem;
+    text-transform: capitalize;
+    cursor: default;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transition: opacity 0.5s ease;
+}
+header .sidebar .profile span.active {
+    opacity: 1;
+}
+
+header .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    min-height: 60vh;
+}
+
+header .sidebar ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 80%;
+    height: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+header .sidebar ul li:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+header .sidebar ul span {
+    background-color: white;
+    width: 80%;
+    height: 2px;
+    margin: 0;
+}
+
+header .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: color 0.3s ease;
+}
+
+header .sidebar ul li:hover a {
+    color: black;
+}
+
+header .sidebar ul li a i {
+    font-size: 1.4rem;
+    position: fixed;
+    left: 4%;
+    margin: 0;
+}
+
+header .sidebar ul li a i p {
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: white;
+    opacity: 0;
+    position: absolute;
+    left: 30px;
+    top: 20%;
+    transition: all 0.4s ease;
+}
+header .sidebar ul li:hover a i p {
+    color: black;
+}
+header .sidebar.active ul li a i p {
+    opacity: 1;
+    left: 35px;
+}
+
+header .sidebar ul li:last-child a .menu {
+    position: absolute;
+    left: 55px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+header .sidebar.active ul li:last-child a .menu {
+    opacity: 1;
+}
+
+header .sidebar ul li .option {
+    opacity: 0;
+}
+
+header .sidebar ul li .dropdown.active .option {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    position: absolute;
+    top: 40px;
+}
+
+header .sidebar ul li .option option {
+    background-color: lightblue;
+    color: black;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+header .sidebar ul li .dropdown.active .fa-chevron-down,
+.fa-chevron-up {
+    transition: transform 0.7s ease;
+}
+
+.fa-chevron-up {
+    transform: rotate(360deg);
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background: url(gambar/M.A.T.A.\ Arena.jpg) no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+}
+
+@media only screen and (max-width: 767px) {
+    header .sidebar {
+        width: 75px;
+    }
+
+    header .sidebar ul li a i {
+        left: 5%;
+    }
+
+    header .sidebar ul li:last-child a .menu {
+        left: 43px;
+    }
+}
