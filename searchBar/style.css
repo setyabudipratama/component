@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    header {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('gambar/Ejen\ Alicia.jpeg') no-repeat center center/cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+
+        .search {
+            background-color: whitesmoke;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            position: relative;
+            transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            label {
+                position: absolute;
+                left: 10%;
+                font-size: 1.2rem;
+                text-transform: capitalize;
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+            label.active {
+                transform: translateY(-90%);
+                font-size: 1rem;
+            }
+
+            input {
+                outline: none;
+                border: none;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                padding: 0 25px;
+                text-transform: capitalize;
+                font-size: 1rem;
+            }
+
+            .fa-magnifying-glass {
+                position: absolute;
+                font-size: 1.5rem;
+                background-color: white;
+                width: 105%;
+                height: 105%;
+                border-radius: inherit;
+                display: grid;
+                place-items: center;
+                cursor: pointer;
+                box-shadow: inset -2px -2px 5px black, 2px 2px 5px black;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .search.active {
+            width: 300px;
+            height: 50px;
+            box-shadow: none;
+
+            label {
+                opacity: 1;
+                position: absolute;
+                left: 10%;
+            }
+
+            .fa-magnifying-glass {
+                position: absolute;
+                right: -20%;
+                width: 50px;
+                height: inherit;
+                box-shadow: none;
+            }
+        }
+    }
+}
