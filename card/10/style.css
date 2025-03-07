@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted black; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    header {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* overflow-x: scroll; */
+
+            .card {
+                background: url('gambar/Alicia\ Inviso.jpg') no-repeat center center/cover;
+                width: 220px;
+                height: 300px;
+                display: flex;
+                flex: 0 0 auto;
+                justify-content: center;
+                align-items: center;
+                margin: 0 10px;
+                border-radius: 30px;
+                position: relative;
+
+                h3 {
+                    position: absolute;
+                    top: 3%;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    font-family: pacifico;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    cursor: default;
+                }
+
+                .foto {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.3s ease;
+                    }
+                }
+
+                .foto:hover img {
+                    transform: scale(1.1);
+                }
+
+                .card-body {
+                    width: 95%;
+                    min-height: 25%;
+                    padding: 10px;
+                    position: absolute;
+                    bottom: 2%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    border-radius: calc(30px - 2%);
+                    background-color: rgb(0, 0, 0, 0.5);
+                    /* backdrop-filter: blur(2px); */
+                    transition: all 0.5s ease;
+
+                    .profile {
+                        position: relative;
+                        left: 0;
+                        width: 50%;
+
+                        h4,
+                        p {
+                            font-weight: 100;
+                            text-transform: capitalize;
+                            color: white;
+                            cursor: default;
+                        }
+
+                        h4 {
+                            font-size: 0.8rem;
+                            font-weight: bold;
+                        }
+
+                        p {
+                            font-size: 0.7rem;
+                            text-align: justify;
+                        }
+                    }
+
+                    button {
+                        width: 90px;
+                        height: 30px;
+                        border-radius: 50px;
+                        border: none;
+                        box-shadow: inset 2px 2px 5px rgb(96, 96, 96),
+                            inset -2px -2px 5px rgb(18, 18, 18);
+                        outline: none;
+                        background: transparent;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        color: white;
+                        text-transform: capitalize;
+                        cursor: pointer;
+                        position: relative;
+                        display: grid;
+                        place-items: center;
+                        transition: all 0.3s ease;
+                        span {
+                            background: transparent;
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: grid;
+                            place-items: center;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+
+                            .fa-user-check {
+                                color: white;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    button:hover {
+                        box-shadow: inset -2px -2px 5px rgb(96, 96, 96),
+                            inset 2px 2px 5px rgb(18, 18, 18);
+                    }
+
+                    button:focus span {
+                        animation: alert 1.5s ease forwards;
+                    }
+                }
+            }
+
+            .card:nth-child(2) {
+                background: url('gambar/Ejen\ Kim\ tekno.jpeg') no-repeat center center/cover;
+            }
+
+            .card:nth-child(3) {
+                background: url('gambar/Ejen\ Moon\ inviso.jpg') no-repeat center center/cover;
+            }
+
+            .card:nth-child(4) {
+                background: url('gambar/Ejen\ Iman\ kombat.jpeg') no-repeat center center/cover;
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes alert {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    40%,
+    65% {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
