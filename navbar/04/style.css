@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    header {
+        width: 100%;
+        height: 80vh;
+        background: url('gambar/Alicia.jpeg') no-repeat center center/cover;
+        background-color: rgba(0, 0, 0, 0.4);
+        background-blend-mode: multiply;
+        background-position: 0 30%;
+    }
+
+    nav {
+        width: 100%;
+        height: 9vh;
+        background-color: yellow;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        .menu {
+            display: none;
+        }
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+
+            li {
+                text-transform: capitalize;
+                font-weight: bold;
+            }
+        }
+    }
+
+    #page1 {
+        width: 100%;
+        height: 150vh;
+        background: url('gambar/Alicia\ Inviso.jpg') no-repeat center center/cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        height: 30vh !important;
+    }
+
+    nav {
+        position: relative;
+
+        .menu {
+            display: block !important;
+            width: 40px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 5%;
+
+            span:first-child {
+                width: 100%;
+                height: 8px;
+                background-color: black;
+                position: absolute;
+                top: 30%;
+                transition: all 0.5s ease;
+            }
+
+            span:nth-child(2) {
+                width: 100%;
+                height: 8px;
+                background-color: black;
+                position: absolute;
+                top: 60%;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .menu.active span:first-child {
+            transform: rotate(135deg) translateX(35%);
+            border-radius: 50%;
+        }
+
+        .menu.active span:nth-child(2) {
+            transform: rotate(45deg) translateX(-35%);
+            border-radius: 50%;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            height: 100%;
+            row-gap: 10px;
+
+            li:first-child {
+                position: absolute;
+                top: 10px;
+                width: 10%;
+                height: 40px;
+                background-color: yellow;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: translateY(-20%);
+                transition: all 0.5s ease;
+            }
+
+            li:nth-child(2) {
+                position: absolute;
+                top: 60px;
+                width: 10%;
+                height: 40px;
+                background-color: yellow;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: translateY(-20%);
+                transition: all 0.5s ease 0.2s;
+            }
+
+            li:nth-child(3) {
+                position: absolute;
+                top: 110px;
+                width: 10%;
+                height: 40px;
+                background-color: yellow;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: translateY(-20%);
+                transition: all 0.5s ease 0.4s;
+            }
+
+            li:nth-child(4) {
+                position: absolute;
+                top: 160px;
+                width: 10%;
+                height: 40px;
+                background-color: yellow;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: translateY(-20%);
+                transition: all 0.5s ease 0.6s;
+            }
+
+            li.active {
+                opacity: 1;
+                transform: translateY(0);
+                width: 60%;
+            }
+        }
+    }
+}
