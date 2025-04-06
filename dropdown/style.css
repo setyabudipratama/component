@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    header {
+        background: url(gambar/Ejen\ Alicia.jpg) no-repeat center center/cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+
+        .container {
+            width: 90%;
+            height: 90%;
+            display: grid;
+            place-items: center;
+            
+            .content {
+                width: 50%;
+                height: 90%;
+                display: grid;
+                place-items: center;
+                position: relative;
+                position: relative;
+                right: 10%;
+                top: 10%;
+
+                button {
+                    width: 180px;
+                    height: 50px;
+                    background-color: yellow;
+                    border-radius: 15px;
+                    border: none;
+                    outline: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 5;
+                    cursor: pointer;
+                    position: relative;
+                    transition: all 0.5s ease;
+
+                    p {
+                        position: absolute;
+                        left: 15%;
+                        text-transform: capitalize;
+                        font-size: 1.1rem;
+                    }
+
+                    .menu {
+                        width: 40px;
+                        height: 40px;
+                        /* border: 1px solid black; */
+                        position: absolute;
+                        right: 15%;
+                        z-index: 5;
+
+                        span {
+                            width: 60%;
+                            height: 4px;
+                            background-color: black;
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            transform: rotate(45deg) translate(0, 0);
+                            border-radius: 50px;
+                            transition: all 0.5s ease;
+                        }
+    
+                        span::before {
+                            content: '';
+                            width: 100%;
+                            height: 4px;
+                            background-color: black;
+                            display: block;
+                            position: absolute;
+                            transform: rotate(90deg) translate(-45%, -250%);
+                            border-radius: 50px;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                }
+
+                .active .menu span {
+                    transform: rotate(45deg) translate(20%, -200%);
+                }
+
+                .active .menu span::before {
+                    transform: rotate(90deg) translate(0, 0);
+                }
+
+                button:hover {
+                    background-color: blue;
+                    color: white;
+                }
+
+                button:hover span {
+                    background-color: white;
+                }
+
+                button:hover span::before {
+                    background-color: white;
+                }
+
+                button.active {
+                    transform: translateY(-20%);
+                }
+
+                ul {
+                    position: absolute;
+                    top: 55%;
+                    width: 150px;
+                    min-height: 20%;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    
+                    li {
+                        list-style: none;
+                        color: white;
+                        background-color: blue;
+                        width: 50%;
+                        height: 20px;
+                        display: flex;
+                        border-radius: 10px;
+                        justify-content: center;
+                        align-items: center;
+                        text-transform: capitalize;
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
+
+                    li:nth-child(2) {
+                        transition-delay: 0.2s;
+                    }
+                    
+                    li:nth-child(3) {
+                        transition-delay: 0.4s;
+                    }
+                    
+                    li:nth-child(4) {
+                        transition-delay: 0.6s;
+                    }
+                }
+                
+                .active li {
+                    width: 100%;
+                    height: 40px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
