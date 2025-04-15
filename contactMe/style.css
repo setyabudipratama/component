@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    #contactMe {
+        width: 100%;
+        height: 100vh;
+        background: url(gambar/ejenAlicia.webp) no-repeat center center/cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+
+            form {
+                width: 500px;
+                height: 500px;
+                /* background-color: yellow; */
+                background-color: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(5px);
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 10px;
+
+                h2 {
+                    position: relative;
+                    top: -10%;
+                    text-transform: capitalize;
+                    cursor: default;
+                }
+
+                .nama {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 20px;
+
+                    .depan,
+                    .belakang {
+                        width: 150px;
+                        height: 50px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        label {
+                            text-transform: capitalize;
+                            /* transform: translateY(-50%); */
+                            position: absolute;
+                            top: 0;
+                            left: 5%;
+                            transition: all 0.3s ease;
+                        }
+
+                        input {
+                            background: transparent;
+                            border: none;
+                            border-bottom: 2px solid black;
+                            outline: none;
+                            width: 100%;
+                        }
+
+                        input:focus+label,
+                        input:valid+label {
+                            transform: translateY(-50%);
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+
+                .form {
+                    width: 65%;
+                    min-height: 200px;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        text-transform: capitalize;
+                        position: relative;
+                        top: -15%;
+                        left: 5%;
+                        transition: all 0.3s ease;
+                        height: 20px;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 40px;
+                        background: transparent;
+                        border: none;
+                        border-bottom: 2px solid black;
+                        outline: none;
+                    }
+
+                    label:nth-child(6) {
+                        top: -25%;
+                    }
+
+                    input:nth-child(5) {
+                        height: 80px;
+                        background: transparent;
+                        border: none;
+                        border-left: 2px solid black;
+                        /* border-right: 2px solid black; */
+                        border-bottom: 2px solid black;
+                        outline: none;
+                        position: relative;
+                        top: 10%;
+                    }
+
+                    input:focus+label,
+                    input:valid+label {
+                        transform: translateY(-50%);
+                        font-size: 0.8rem;
+                    }
+                }
+
+                button {
+                    width: 140px;
+                    height: 40px;
+                    background: transparent;
+                    border: 2px solid yellow;
+                    border-radius: 20px;
+                    position: relative;
+                    left: -15%;
+                    top: 5%;
+                    text-transform: capitalize;
+                    font-size: 1rem;
+                    transition: all 0.5s ease;
+                }
+
+                button:hover {
+                    background-color: yellow;
+                    box-shadow: 0 0 5px yellow,
+                        0 0 10px yellow,
+                        0 0 15px yellow,
+                        0 0 20px yellow;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
