@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="content">
+                <div class="left">
+                    <h2>welcome</h2>
+                    <div class="social">
+                        <i class="fa-brands fa-google"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="login active">
+                        <h2>login</h2>
+                        <form action="">
+                            <div class="user">
+                                <input type="text" id="user" required>
+                                <label for="user">username</label>
+                            </div>
+                            <div class="pass">
+                                <input type="password" id="pass" autocomplete="on" required>
+                                <label for="pass">password</label>
+                            </div>
+                            <button><span><i class="fa-solid fa-floppy-disk"></i></span>login</button>
+                            <h5>belum punya akun
+                                <span>register</span>
+                            </h5>
+                        </form>
+                    </div>
+                    <div class="register">
+                        <h2>register</h2>
+                        <form action="">
+                            <div class="user">
+                                <input type="text" id="user2" required>
+                                <label for="user2">username</label>
+                            </div>
+                            <div class="pass">
+                                <input type="password" id="pass2" autocomplete="on" required>
+                                <label for="pass2">password</label>
+                            </div>
+                            <div class="pass2">
+                                <input type="password" id="pass3" autocomplete="on" required>
+                                <label for="pass3">konfirmasi password</label>
+                            </div>
+                            <button><span><i class="fa-solid fa-floppy-disk"></i></span>register</button>
+                            <h5>sudah punya akun
+                                <span>login</span>
+                            </h5>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
