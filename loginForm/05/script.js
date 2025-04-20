@@ -11,7 +11,7 @@ document.querySelectorAll('.fa-eye').forEach(eye => {
         passwordInputs.forEach(passwordInput => {
             passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
             this.classList.toggle('fa-eye-slash', passwordInput.type === 'text');
-            this.classList.toggle('fa-eye', passwordInput.type !== 'text');
+            this.classList.toggle('fa-eye', passwordInput.type === 'password');
             this.classList.toggle('active', passwordInput.type === 'text');
         })
     })
