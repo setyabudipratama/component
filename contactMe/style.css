@@ -24,20 +24,23 @@ body {
                 width: 500px;
                 height: 500px;
                 /* background-color: yellow; */
-                background-color: rgba(255, 255, 255, 0.3);
-                backdrop-filter: blur(5px);
+                background-color: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(1px);
                 border-radius: 20px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 row-gap: 10px;
+                border: 2px solid;
+                animation: border 4s linear infinite;
 
                 h2 {
                     position: relative;
                     top: -10%;
                     text-transform: capitalize;
                     cursor: default;
+                    color: white;
                 }
 
                 .nama {
@@ -62,15 +65,17 @@ body {
                             position: absolute;
                             top: 0;
                             left: 5%;
+                            color: white;
                             transition: all 0.3s ease;
                         }
 
                         input {
                             background: transparent;
                             border: none;
-                            border-bottom: 2px solid black;
+                            border-bottom: 2px solid white;
                             outline: none;
                             width: 100%;
+                            color: white;
                         }
 
                         input:focus+label,
@@ -94,6 +99,7 @@ body {
                         left: 5%;
                         transition: all 0.3s ease;
                         height: 20px;
+                        color: white;
                     }
 
                     input {
@@ -101,8 +107,9 @@ body {
                         height: 40px;
                         background: transparent;
                         border: none;
-                        border-bottom: 2px solid black;
+                        border-bottom: 2px solid white;
                         outline: none;
+                        color: white;
                     }
 
                     label:nth-child(6) {
@@ -113,9 +120,9 @@ body {
                         height: 80px;
                         background: transparent;
                         border: none;
-                        border-left: 2px solid black;
-                        /* border-right: 2px solid black; */
-                        border-bottom: 2px solid black;
+                        border-left: 2px solid white;
+                        /* border-right: 2px solid white; */
+                        border-bottom: 2px solid white;
                         outline: none;
                         position: relative;
                         top: 10%;
@@ -139,6 +146,7 @@ body {
                     top: 5%;
                     text-transform: capitalize;
                     font-size: 1rem;
+                    color: white;
                     transition: all 0.5s ease;
                 }
 
@@ -149,8 +157,29 @@ body {
                         0 0 15px yellow,
                         0 0 20px yellow;
                     transform: scale(1.1);
+                    color: black;
                 }
             }
         }
+    }
+}
+
+@keyframes border {
+
+    0%,
+    100% {
+        border: 2px solid yellow;
+    }
+
+    25% {
+        border: 2px solid red;
+    }
+
+    50% {
+        border: 2px solid grey;
+    }
+
+    75% {
+        border: 2px solid blue;
     }
 }
