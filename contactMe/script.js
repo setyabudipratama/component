@@ -10,7 +10,7 @@ document.getElementById('kirim').addEventListener('click', (e) => {
         `Nama Depan : ${namaDepan}`,
         `Nama Belakang : ${namaBelakang}`,
         `Email : ${email}`,
-        `Number : ${number}`,
+        `Nomor : ${number}`,
         `Pesan : ${pesan}`
     ]
 
