@@ -23,7 +23,7 @@ export default {
             } else {
                 Swal.fire({
                     title: 'Tidak Suka!',
-                    text: 'saya tidak suka',
+                    text: 'Saya tidak suka',
                     color: 'white',
                     background: 'red',
                     confirmButtonText: 'Oke'
