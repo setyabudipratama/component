@@ -6,12 +6,12 @@
                     <div class="card-body">
                         <!-- tambahkan props jika ingin menambahkan data, contoh {{ title }}-->
                         <img class="profile" src="../assets/Ejen Alicia.jpg" alt="Ejen Ali Movie">
-                        <h2>Ejen Alicia</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, illo.</p>
+                        <h2>ejen alicia</h2>
+                        <p>pilar neuro</p>
                     </div>
                     <div class="button">
-                        <button><i class="fa-solid fa-heart"></i></button>
-                        <button><i class="fa-solid fa-thumbs-up"></i></button>
+                        <!-- tambah dan panggil component lain -->
+                        <buttonCard />
                     </div>
                 </div>
             </div>
@@ -20,8 +20,14 @@
 </template>
 
 <script>
+// tambah dan panggil component lain
+import buttonCard from './buttonCard.vue'
+
 export default {
-    name: 'card'
+    name: 'card',
+    components: {
+        buttonCard
+    }
     // // contoh props
     // props: {
     //     title: {
@@ -94,6 +100,7 @@ header {
 
                     h2,
                     p {
+                        text-transform: capitalize;
                         text-align: center;
                         font-family: Arial, Helvetica, sans-serif;
                         cursor: default;
