@@ -13,7 +13,7 @@ import { ref } from 'vue'
 const isNightMode = ref(false)
 
 // fungsi untuk mengubah darkmode
-const toggleActive = () => {
+function toggleActive() {
     isNightMode.value = !isNightMode.value
     
     // ambil elemen app sebagai target
