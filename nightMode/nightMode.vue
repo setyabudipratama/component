@@ -1,6 +1,6 @@
 <template>
     <header class="lamp" :class="isNightMode ? 'dark' : 'light'">
-        <button class="lampChild" @click="toggleActive">
+        <button @click="toggleActive">
             <i class="fa-regular fa-lightbulb"></i>
         </button>
     </header>
@@ -39,7 +39,7 @@ export default {
     top: -40%;
     left: -45%;
 
-    .lampChild {
+    button {
         position: fixed;
         z-index: 1000;
         width: 40px;
