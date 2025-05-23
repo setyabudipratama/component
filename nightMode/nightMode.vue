@@ -6,30 +6,21 @@
     </header>
 </template>
 
-<script>
-export default {
-    name: 'nightMode',
-    data() {
-        return {
-            isNightMode: false
-        }
-    },
-    mounted() {
-        this.updateTheme()
-    },
-    methods: {
-        toggleActive() {
-            this.isNightMode = !this.isNightMode
-            this.updateTheme()
-        },
-        updateTheme() {
-            // ambil element app sebagai target
-            const app = document.querySelector('#app')
-            if (!app) return
-            app.classList.toggle('dark', this.isNightMode)
-            app.classList.toggle('light', !this.isNightMode)
-        }
-    }
+<script setup>
+import { ref } from 'vue'
+
+// tidak aktif pada awal
+const isNightMode = ref(false)
+
+// fungsi untuk mengubah darkmode
+const toggleActive = () => {
+    isNightMode.value = !isNightMode.value
+    
+    // ambil elemen app sebagai target
+    const app = document.querySelector('#app')
+    if (!app) return
+    app.classList.toggle('dark', isNightMode.value)
+    app.classList.toggle('light', !isNightMode.value)
 }
 </script>
 
