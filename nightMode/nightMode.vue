@@ -27,11 +27,14 @@ function toggleActive() {
 <style scope>
 .lamp {
     position: fixed;
-    top: -40%;
-    left: -45%;
+    width: 100%;
+    top: 0;
+    left: 0;
 
     button {
         position: fixed;
+        top: 7%;
+        left: 5%;
         z-index: 1000;
         width: 40px;
         height: 40px;
