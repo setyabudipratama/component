@@ -36,7 +36,7 @@
         </div>
         <div class="pass2">
             <input id="pass2" type="password" v-model="pass2" autocomplete="current-password"  :class="{ dark:isDarkMode }">
-            <label for="pass2">password</label>
+            <label for="pass2">konfirmasi password</label>
         </div>
         <button>register</button>
         <!-- vue directive v-on -->
